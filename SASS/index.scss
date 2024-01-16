@@ -1,0 +1,121 @@
+/* Layout generale pagina principale */
+@import "footer";
+@import "variabili";
+
+%link{
+    color: blue;
+    font-size: 17px;
+    display: inline;
+    margin-left: 10px;
+}
+%linkHover{
+    text-decoration: underline;
+    color: #ffd700;
+}
+%fontemargin{
+    font-size: larger;
+    margin-left: 100px;
+}
+%servizi{
+    border-style: groove;
+    border-radius: 10px;
+    border-color: rgb(142, 177, 252);
+    background-color: rgb(142, 177, 252);
+    color: black;
+    flex-wrap: wrap;
+    display: flex;
+    margin-left: 10px;
+    margin-right: 400px;
+    height: fit-content;
+    width: fit-content;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+#link1{
+    @extend %link;
+}
+#link2{
+    @extend %link;
+}
+#link1:hover{
+    @extend %linkHover;
+}
+#link2:hover{
+    @extend %linkHover;
+}
+#link3{
+    background-color: $bg;
+    height:35px;
+    color: white;
+    font-size: 17px;
+}
+#link3:hover{
+    text-decoration: underline;
+    opacity: 0.7;
+}
+html{
+    font-size: $font;
+    width: $width;
+}
+div{
+    margin-bottom: 50px;
+}
+body{
+    background-image: url(https://cdn.discordapp.com/attachments/906882508635926608/1189855969501519892/sfondo_1.jpeg?ex=659faeb9&is=658d39b9&hm=e6e3056dc525f5cda8e3c895e13045b6d7513b5d21295fb8fa1ce42bec7a32a8&);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    margin-left: $marginLeft;
+}
+h2{
+    margin-left: $marginLeft;
+}
+a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#fff;
+}
+p{
+    color: black;
+}
+#chi-sono>p{
+    @extend %fontemargin;
+}
+#logo-Apple{
+    height: fit-content;
+    width: $width;
+    display: inline;
+    margin-left: $marginLeft + $marginLeft;
+}
+#logo-Apple:hover{
+    border-style: groove;
+    border-radius: 10px;
+    border-color: #ffd700;
+    border-width: 20px;
+    opacity: 0.7;
+}
+#nome{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    text-decoration: underline;
+  }
+
+  #mi-chiamo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#frontend{
+    @extend %servizi;
+}
+#backend{
+    @extend %servizi;
+}
+#web-designing{
+    @extend %servizi;
+}
+#cloud-engineering{
+    @extend %servizi;
+}
+#contattami{
+    margin-left: $marginLeft;
+}

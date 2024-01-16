@@ -1,0 +1,72 @@
+/*Layout generale lavoro singolo*/
+@import "footer";
+@import "variabili";
+
+html{
+    font-size:larger;
+    color: white;
+    width: fit-content;
+}
+footer{
+    max-height: 1400px;
+}
+footer>h2{
+    font-family: fantasy;
+}
+%family{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p{
+    @extend %family;
+}
+li{
+    @extend %family;
+}
+%links{
+    color: cyan;
+    font-size: 17px;
+    display: inline;
+    margin-left: 10px;
+    text-decoration: none;
+}
+#home{
+    @extend %links;
+}
+#link1{
+    @extend %links;
+}
+#link2{
+    @extend %links;
+}
+%linksHover{
+    text-decoration: underline;
+    color: #ffd700;
+}
+#home:hover{
+    @extend %linksHover;
+}
+#link1:hover{
+    @extend %linksHover;
+}
+#link2:hover{
+    @extend %linksHover;
+}
+#elenco{
+    margin-top: 100px;
+}
+body{
+    background-image: url(https://cdn.discordapp.com/attachments/906882508635926608/1193840066150277150/sfondo-fullstack.jpg?ex=65ae2d34&is=659bb834&hm=c3d7da6e3babcb6f8a4c1138ad5c04b9c01083207443505ff658f1ff0ccb1a4b&);
+}
+h1{
+    @extend %family;
+}
+h2{
+    @extend %family;
+}
+#descrizione{
+    text-align: center;
+}
+#align{
+    display: block;
+    text-align: center;
+}

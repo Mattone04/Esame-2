@@ -1,0 +1,94 @@
+/*Layout generale pagina contatti + form*/
+@import "footer";
+@import "variabili";
+
+%nomeecognome{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: orange;
+    text-decoration: underline;
+    height: fit-content;
+    font-size: 15px;
+    width: 500px;
+    height: 40px;
+}
+#nome{
+    @extend %nomeecognome;
+}
+#cognome{
+    @extend %nomeecognome;
+}
+#email{
+    @extend %nomeecognome;
+}
+#richiesta{
+    @extend %nomeecognome;
+}
+html{
+    font-size: larger;
+    color: #547fe3;
+}
+#invia{
+    background-color: orange;
+    color:white;
+}
+#invia:hover{
+    color:aquamarine;
+    text-decoration: underline;
+    opacity: 0.7;
+    border-style: groove;
+    border-radius: 10px;
+}
+#contatti{
+    text-align: $center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+%links{
+    color: cyan;
+    font-size: 17px;
+    display: inline;
+    margin-left: 10px;
+    text-decoration: none;
+}
+#home{
+    @extend %links;
+}
+#link1{
+    @extend %links;
+}
+#link2{
+    @extend %links;
+}
+%linksHover{
+    text-decoration: underline;
+    color: #ffd700;
+}
+#home:hover{
+    @extend %linksHover;
+}
+#link1:hover{
+    @extend %linksHover;
+}
+#link2:hover{
+    @extend %linksHover;
+}
+#informazioni{
+    text-align: $center;
+}
+body{
+    background-image: url(https://cdn.discordapp.com/attachments/906882508635926608/1184817863706550282/sfondo-contatti.jpeg?ex=658d5a9f&is=657ae59f&hm=d9d6af0c22e07e9da8bf391a1c40994222a26a73401ca556ca83f099f9ffa4d4&);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#seguitemi{
+    color: black;
+}
+#spunta-dati{
+    margin-top: 30px;
+}
+#mappa-e-contatti{
+    margin-top: 70px;
+    text-align: $center;
+}

@@ -1,0 +1,83 @@
+/*Layout generale portfolio*/
+@import "variabili";
+@import "footer";
+
+html{
+    font-size: $font;
+    color: white;
+}
+%family{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p{
+    @extend %family;
+}
+li{
+    @extend %family;
+}
+#portfolio{
+    @extend %family;
+    color: white;
+    margin-left: 10px;
+}
+%links{
+    color: cyan;
+    font-size: 17px;
+    display: inline;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+  %linksHover{
+    text-decoration: underline;
+    color: #ffd700;
+}
+body{
+    background-image: url(https://cdn.discordapp.com/attachments/906882508635926608/1189878067284410368/sfondo-lavoro.jpg?ex=659fc34e&is=658d4e4e&hm=0e8de0b7011c9f3f6391f43a10011290f3c378e5759cdfff5b6f4ed20e281ac1&);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+%border{
+    border-style: groove;
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#volo{
+    @extend %border;
+}
+#supermercato{
+    @extend %border;
+}
+#programmazione{
+    @extend %border;
+}
+#lavori-in-volo{
+    margin-top: $marginTop;
+}
+#lavori-supermercato{
+    margin-top: $marginTop;
+}
+#lavori-programmazione{
+    margin-top: $marginTop;
+}
+#home{
+    @extend %links;
+}
+#link2{
+    @extend %links;
+}
+#home:hover{
+    @extend %linksHover;
+}
+#link2:hover{
+    @extend %linksHover;
+}
+#titolo{
+    text-align: center;
+}
+#elenco{
+    text-align: center;
+}
