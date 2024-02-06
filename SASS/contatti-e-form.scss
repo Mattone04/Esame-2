@@ -25,11 +25,13 @@
 }
 html{
     font-size: larger;
-    color: #547fe3;
+    color: black;
 }
 #invia{
     background-color: orange;
     color:white;
+    width: 70px;
+    height: 40px;
 }
 #invia:hover{
     color:aquamarine;
@@ -46,7 +48,7 @@ p{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 %links{
-    color: cyan;
+    color: blue;
     font-size: 17px;
     display: inline;
     margin-left: 10px;
@@ -54,12 +56,16 @@ p{
 }
 #home{
     @extend %links;
-}
-#link1{
-    @extend %links;
+    position:absolute;
+    top:20px;
+    font-size: large;
 }
 #link2{
     @extend %links;
+    position:absolute;
+    top:20px;
+    left:70px;
+    font-size: large;
 }
 %linksHover{
     text-decoration: underline;
@@ -68,19 +74,11 @@ p{
 #home:hover{
     @extend %linksHover;
 }
-#link1:hover{
-    @extend %linksHover;
-}
 #link2:hover{
     @extend %linksHover;
 }
 #informazioni{
     text-align: $center;
-}
-body{
-    background-image: url(https://cdn.discordapp.com/attachments/906882508635926608/1184817863706550282/sfondo-contatti.jpeg?ex=658d5a9f&is=657ae59f&hm=d9d6af0c22e07e9da8bf391a1c40994222a26a73401ca556ca83f099f9ffa4d4&);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 #seguitemi{
     color: black;
@@ -91,4 +89,8 @@ body{
 #mappa-e-contatti{
     margin-top: 70px;
     text-align: $center;
+}
+#nav{
+    background-color: red;
+    height: 50px;
 }

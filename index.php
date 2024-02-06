@@ -2,27 +2,26 @@
 /**
  * Pagina home del sito + chi sono + servizi
 */
-
+$read = file_get_contents('servizi-e-prodotti.json');
+json_decode($read);
+$json = json_encode($read,true);
 $titolo = "Il mio sito web";
 $michiamo = "Mi chiamo";
 $nome = "Matteo Malandrino";
-$professione = "Sono un full-stack developer";
+$professione = "Sono un <strong>full-stack developer</strong>";
 $img = "https://cdn.discordapp.com/attachments/906882508635926608/1179003537993248818/logo-apple-300x188.png?ex=65a6581c&is=6593e31c&hm=5c5759f8f597ef0dc91e491fb907061d6f3e022cbcfee23a98ca50847e3ff3b2&";
 $social = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css";
-$altro = "Appena ho finito la scuola, mi ci è voluto poco per capire cosa volevo fare davvero, da allora in poi mi sono dedicato giornate intere alla scrittura e stesura di codici, finché non ho trasformato tutto questo nel mio lavoro ideale: seguite i vostri sogni con passione e dedizione finché non si realizzano.";
+$altro = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor mauris nulla, id ornare lorem dapibus ut. Vestibulum consectetur ultricies lacus, sit amet condimentum lectus fringilla in. Aenean dapibus metus sit amet ante volutpat molestie. Morbi vehicula, risus quis pharetra rhoncus, justo nisi consectetur nisi, eget rutrum orci nisl vel ex.";
 $contattami = "Contattami";
 function servizi() {
   echo("<div id='frontend' class='col-1'><h3>Front-end</h3>
    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mauris libero, elementum ac mollis fringilla, tristique sed quam. Aliquam hendrerit viverra convallis. Pellentesque tincidunt leo dui, vel faucibus turpis mattis ac.</p></div>
-   <br>
    <div id='backend' class='col-2'><h3>Back-end</h3>
    <p>Maecenas nec ultrices sem, vel consectetur ligula. Praesent quis vestibulum turpis. Duis finibus nulla ac quam consequat scelerisque. Proin bibendum sem ac tempor convallis. Suspendisse arcu urna, maximus eu scelerisque luctus, ultrices nec sem.</p></div>
-   <br>
    <div id='web-designing' class='col3'><h3>Web design</h3>
    <p>Cras et lacus hendrerit, suscipit dui vestibulum, tincidunt mauris. Integer purus massa, tempus elementum sapien facilisis, vulputate suscipit libero. In ex turpis, condimentum et pellentesque quis, malesuada ac erat.</p></div>
-   <br>
    <div id='cloud-engineering' class='col-4'><h3>Cloud Engineering</h3>
-   <p>Phasellus placerat massa ut neque porttitor imperdiet. Phasellus maximus risus placerat ligula faucibus, eu sagittis est dapibus. Donec viverra, eros nec accumsan tincidunt, risus nibh sagittis arcu, sit amet sodales metus elit non lectus.</p></div>");
+   <p>Phasellus placerat massa ut neque porttitor imperdiet. Phasellus maximus risus placerat ligula faucibus, eu sagittis est dapibus.</p></div>");
 
 }
 $facebook = "https://www.facebook.com";
@@ -35,6 +34,7 @@ require("funzioni.php")
 
 ?>
 
+<!DOCTYPE html>
 <html lang="it">
 
 
@@ -51,8 +51,9 @@ require("funzioni.php")
 <body>
 
  <!-- Presentazione sito (chi sono) -->
- <?php link2() ?>
- <a href="json.php">A</a>
+ <div id="nav">
+  <?php link2() ?>
+ </div>
  <div id="chi-sono">
   
 
@@ -60,23 +61,28 @@ require("funzioni.php")
  <h2 id="mi-chiamo"><?php echo $michiamo; ?></h2><br>
  <h1 id="nome"><?php echo $nome; ?></h1>
  <p id="professione"><?php echo $professione; ?></p>
+ 
 
  </div>
+ <form action="preventivo.php" method="post">
+<button id="bottone" type="submit">Chiedici un preventivo</button>
+ </form>
 
  <div><img src=<?php echo $img; ?> id="logo-Apple" title="Logo Apple full-stack developer"></div>
 
- <div id="altro">
-    <p><?php echo $altro; ?></p>
- </div>
- <div id="contattami">
-  <form action="contatti-e-form.php">
-   <button id="link3" name=<?php echo $contattami; ?> type="submit"><?php echo $contattami; ?></button>
-  </form>
- </div>
-
  <hr>
- <h2 id="servizi">I nostri servizi</h2>
+   <img id="imgAltro" name="Informazioni personali" title="Informazioni personali" alt="Informazioni personali" src="https://cdn.discordapp.com/attachments/906882508635926608/1199651083941855282/info.jpeg?ex=65c35122&is=65b0dc22&hm=abf764f953dca406c91eca12b7612aa40677477f46a36e6c5bd007f24d1343e9&">
+    <div id="altro">
+      <h2>Informazioni personali</h2>
+      <p><?php echo $altro; ?></p>
+    </div>
+ <hr>
+ <h2 id="servizi">I nostri servizi e progetti</h2>
  <?php servizi() ?>
+  <h2 id="progetto-1"><a id="link-progetto" href="progetto-front-end.php">Progetto front-end developer</a></h2>
+  <h2 id="progetto-2"><a id="link-progetto2" href="progetto-back-end.php">Progetto back-end developer</a></h2>
+  <h2 id="progetto-3"><a id="link-progetto3" href="progetto-web-design.php">Progetto web design</a></h2>
+  <h2 id="progetto-4"><a id="link-progetto4" href="progetto-cloud-engineering.php">Progetto cloud engineering</a></h2>
  <hr>
  <br><br><br>
  <!-- Il mio finto logo e social -->

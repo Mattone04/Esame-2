@@ -1,0 +1,5 @@
+[
+    {"id":1, "cat": "Lavori-in-volo", "testo":"I miei lavori in aereo", "link":"portfolio.php", "title":"Vai alla pagina del portfolio","target":null},
+    {"id":2, "cat": "Lavori-al-supermercato", "testo":"I miei lavori al supermercato", "link":"portfolio.php", "title":"Vai alla pagina del portfolio","target":null},
+    {"id":3, "cat": "Lavori-in-programmazione", "testo":"I miei lavori da programmatore", "link":"portfolio.php", "title":"Vai alla pagina del portfolio","target":null}
+]

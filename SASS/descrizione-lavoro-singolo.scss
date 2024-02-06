@@ -4,8 +4,10 @@
 
 html{
     font-size:larger;
-    color: white;
-    width: fit-content;
+    color: black;
+}
+#data,#elenco,ul{
+    margin-left: 50px;
 }
 footer{
     max-height: 1400px;
@@ -23,7 +25,7 @@ li{
     @extend %family;
 }
 %links{
-    color: cyan;
+    color: blue;
     font-size: 17px;
     display: inline;
     margin-left: 10px;
@@ -31,12 +33,24 @@ li{
 }
 #home{
     @extend %links;
+    position:absolute;
+    top:20px;
+    font-size: large;
 }
 #link1{
     @extend %links;
+    position:absolute;
+    top:20px;
+    left:70px;
+    font-size: large;
 }
 #link2{
     @extend %links;
+    position: absolute;
+    top:20px;
+    left:200px;
+    font-size: large;
+
 }
 %linksHover{
     text-decoration: underline;
@@ -54,19 +68,25 @@ li{
 #elenco{
     margin-top: 100px;
 }
-body{
-    background-image: url(https://cdn.discordapp.com/attachments/906882508635926608/1193840066150277150/sfondo-fullstack.jpg?ex=65ae2d34&is=659bb834&hm=c3d7da6e3babcb6f8a4c1138ad5c04b9c01083207443505ff658f1ff0ccb1a4b&);
-}
 h1{
     @extend %family;
+}
+#esperienza{
+    text-align: center;
 }
 h2{
     @extend %family;
 }
 #descrizione{
-    text-align: center;
+    text-align: right;
+    margin-right: 50px;
 }
 #align{
-    display: block;
-    text-align: center;
+    position: absolute;
+    left: 20px;
+    top: 280px;
+}
+#nav{
+    background-color: red;
+    height: 50px;
 }

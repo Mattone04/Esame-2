@@ -4,7 +4,10 @@
 
 html{
     font-size: $font;
-    color: white;
+    color: black;
+    width: fit-content;
+    height: fit-content;
+    font-size: larger;
 }
 %family{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -17,41 +20,27 @@ li{
 }
 #portfolio{
     @extend %family;
-    color: white;
+    color: black;
     margin-left: 10px;
 }
 %links{
-    color: cyan;
-    font-size: 17px;
+    color: blue;
     display: inline;
     margin-left: 10px;
     text-decoration: none;
 }
-
-  %linksHover{
+%linksHover{
     text-decoration: underline;
     color: #ffd700;
-}
-body{
-    background-image: url(https://cdn.discordapp.com/attachments/906882508635926608/1189878067284410368/sfondo-lavoro.jpg?ex=659fc34e&is=658d4e4e&hm=0e8de0b7011c9f3f6391f43a10011290f3c378e5759cdfff5b6f4ed20e281ac1&);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 %border{
     border-style: groove;
     border-top: 1px;
     border-left: 1px;
     border-right: 1px;
-    margin-left: 100px;
-    margin-right: 100px;
+    display: inline-flex;
 }
-#volo{
-    @extend %border;
-}
-#supermercato{
-    @extend %border;
-}
-#programmazione{
+#lista{
     @extend %border;
 }
 #lavori-in-volo{
@@ -65,9 +54,16 @@ body{
 }
 #home{
     @extend %links;
+    position:absolute;
+    top:20px;
+    font-size: large;
 }
 #link2{
     @extend %links;
+    position:absolute;
+    top:20px;
+    left:70px;
+    font-size: large;
 }
 #home:hover{
     @extend %linksHover;
@@ -80,4 +76,52 @@ body{
 }
 #elenco{
     text-align: center;
+}
+#nav{
+    background-color: red;
+    height: 50px;
+}
+#lavoro-singolo,#lavori1,#lavori2,#lavori3,#lavori4,#lavori5,#lavori6,#lavori7,#lavori8,#lavori9,#lavori10,#lavori11{
+    text-decoration: none;
+    color: blue;
+}
+%hover{
+    text-decoration: underline;
+    color: red;
+}
+#lavoro-singolo:hover{
+    @extend %hover;
+}
+#lavori1:hover{
+    @extend %hover;
+}
+#lavori2:hover{
+    @extend %hover;
+}
+#lavori3:hover{
+    @extend %hover;
+}
+#lavori4:hover{
+    @extend %hover;
+}
+#lavori5:hover{
+    @extend %hover;
+}
+#lavori6:hover{
+    @extend %hover;
+}
+#lavori7:hover{
+    @extend %hover;
+}
+#lavori8:hover{
+    @extend %hover;
+}
+#lavori9:hover{
+    @extend %hover;
+}
+#lavori10:hover{
+    @extend %hover;
+}
+#lavori11:hover{
+    @extend %hover;
 }

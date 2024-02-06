@@ -1,0 +1,14 @@
+[
+    {"id":1, "idcat": "1", "testo":"Assistente di volo", "link":"lavori.php", "title":"Vai alla pagina lavori","target":null},
+    {"id":1, "idcat": "1", "testo":"Pilota", "link":"lavori.php", "title":"Vai alla pagina lavori","target":null},
+    {"id":1, "idcat": "1", "testo":"Controllore del traffico aereo", "link":"lavori.php", "title":"Vai alla pagina lavori","target":null},
+    {"id":1, "idcat": "1", "testo":"Manutenzione velivoli", "link":"lavori.php", "title":"Vai alla pagina lavori","target":null},
+    {"id":2, "idcat": "2", "testo":"Cassiere", "link":"lavori.php", "title":"Vai alla pagina lavori","target":null},
+    {"id":2, "idcat": "2", "testo":"Scaffalista", "link":"lavori.php", "title":"Vai alla pagina lavori","target":null},
+    {"id":2, "idcat": "2", "testo":"Banconista", "link":"lavori.php", "title":"Vai alla pagina lavori","target":null},
+    {"id":2, "idcat": "2", "testo":"Addetto alle vendite", "link":"lavori.php", "title":"Vai alla pagina lavori","target":null},
+    {"id":3, "idcat": "3", "testo":"Web designer", "link":"lavori.php", "title":"Vai alla pagina lavori","target":null},
+    {"id":3, "idcat": "3", "testo":"Front-end developer", "link":"lavori.php", "title":"Vai alla pagina lavori","target":null},
+    {"id":3, "idcat": "3", "testo":"Back-end developer", "link":"lavori.php", "title":"Vai alla pagina lavori","target":null},
+    {"id":3, "idcat": "3", "testo":"Full-stack developer", "link":"lavori.php", "title":"Vai alla pagina lavori","target":null}
+]
