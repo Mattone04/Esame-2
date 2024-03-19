@@ -1,5 +1,5 @@
 <?php
-/*Ricordarsi di inserire font-family: cursive per mobile nei loghi*/
+
 require("funzioni.php");
 $facebook = "https://www.facebook.com";
 $instagram = "https://www.instagram.com";
