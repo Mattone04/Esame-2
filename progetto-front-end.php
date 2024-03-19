@@ -2,16 +2,16 @@
 
 $titolo = "Progetto 1";
 $social = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css";
-$img = "https://cdn.discordapp.com/attachments/906882508635926608/1201529897823244349/front-end-progetto.jpg?ex=65ca26ea&is=65b7b1ea&hm=64f78c8a50330fc53ecd8c7a5e91d51776889505ca8aace82e34a4d9167557ea&";
+$img = "https://www.freecodecamp.org/news/content/images/2021/04/image-293.png";
 $facebook = "https://www.facebook.com";
 $instagram = "https://www.instagram.com";
 $twitter = "https://twitter.com/i/flow/login";
 require("funzioni.php");
 function testoRandom() {
-    echo("<h2 id='titolo'>Il nostro primo progetto</h2>");
-    echo("<p id='testo'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus posuere urna, a blandit leo fringilla et. Sed id purus nec dui elementum sagittis. Curabitur id dui odio. Nullam ac dignissim sem. Phasellus eu scelerisque libero. Pellentesque at pharetra tortor, sed egestas urna. Fusce sagittis pulvinar sagittis. Aenean ut risus vulputate, ultricies ante pretium, auctor erat. Praesent lacinia neque vel nunc ultricies, quis blandit diam facilisis. Proin mattis efficitur elementum. Curabitur nec condimentum risus. Donec ut euismod odio. Integer non lectus lacinia, sagittis leo sit amet, mollis tellus. Fusce ac eros hendrerit, hendrerit ex nec, vestibulum turpis. Ut porta metus eleifend odio lobortis, non vulputate odio lobortis. <br><br><br>
+    echo("<h2 id='titolo'>Progetto <br> front-end</h2>");
+    echo("<p id='testo'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus posuere urna, a blandit leo fringilla et. Sed id purus nec dui elementum sagittis. Curabitur id dui odio. Nullam ac dignissim sem. Phasellus eu scelerisque libero. Pellentesque at pharetra tortor, sed egestas urna. Fusce sagittis pulvinar sagittis. Aenean ut risus vulputate, ultricies ante pretium, auctor erat. Praesent lacinia neque vel nunc ultricies, quis blandit diam facilisis. Proin mattis efficitur elementum. Curabitur nec condimentum risus. Donec ut euismod odio. Integer non lectus lacinia, sagittis leo sit amet, mollis tellus. Fusce ac eros hendrerit, hendrerit ex nec, vestibulum turpis. <br> Ut porta metus eleifend odio lobortis, non vulputate odio lobortis. <br><br><br>
 
-    Cras placerat tincidunt ex sit amet iaculis. Nulla eu tortor pretium, tempor nisi at, dignissim purus. Mauris lacus urna, mattis at metus sed, tempor ullamcorper orci. Aenean nec pretium neque. Sed sit amet nisi purus. Etiam in leo nec enim ullamcorper volutpat. Aenean sit amet tellus ut erat facilisis sodales. Nullam posuere lectus neque, in blandit lacus viverra ac. Sed placerat non lorem ut tempor. Morbi aliquam, nisi nec ullamcorper dictum, dolor odio mattis ante, et sodales nunc ex non ipsum. Aenean iaculis tristique orci eu fringilla. Aenean semper porta placerat. Morbi sed sodales ligula. Donec condimentum augue eget enim blandit faucibus.
+    Cras placerat tincidunt ex sit amet iaculis. Nulla eu tortor pretium, tempor nisi at, dignissim purus. Mauris lacus urna, mattis at metus sed, tempor ullamcorper orci. <br> Aenean nec pretium neque. Sed sit amet nisi purus. <br> Etiam in leo nec enim ullamcorper volutpat. <br> Aenean sit amet tellus ut erat facilisis sodales. <br> Nullam posuere lectus neque, in blandit lacus viverra ac. Sed placerat non lorem ut tempor. Morbi aliquam, nisi nec ullamcorper dictum, dolor odio mattis ante, et sodales nunc ex non ipsum. Aenean iaculis tristique orci eu fringilla. Aenean semper porta placerat. Morbi sed sodales ligula. Donec condimentum augue eget <br> enim blandit faucibus.
     
     Maecenas ac felis eu arcu consectetur mattis non sit amet ex. Suspendisse sed fringilla lacus. Praesent ac lorem viverra purus scelerisque cursus vel in velit. Morbi sapien neque, consectetur et massa at, dignissim imperdiet dui. Phasellus faucibus sollicitudin risus, vitae condimentum felis pretium pellentesque. <br><br><br> Integer sed elit a nisl vestibulum dapibus. Nullam gravida id erat sit amet consectetur. Donec sagittis turpis augue, et gravida felis posuere at. Nullam ornare ipsum sed porttitor eleifend. Etiam eget nulla laoreet, finibus neque at, facilisis massa. Curabitur vitae est at magna volutpat egestas.
     
@@ -28,11 +28,120 @@ function testoRandom() {
 
 <head>
     <meta charset="Utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="il mio sito web">
     <title><?php echo $titolo; ?></title>
     <link href=<?php echo $social; ?> type="text/css" rel="stylesheet">
     <style>
+      footer{
+    background-color: #5A5A5A;
+    color: whitesmoke;
+    height: fit-content;
+}
+#link>li>a{
+    text-decoration: none;
+    color: yellow;
+}
+#link>li{
+    margin-top: 10px;
+}
+#contatti>li{
+    margin-top: 10px;
+}
+#link{
+    padding-top: 60px;
+    padding-left: 60px;
+    display: inline-block;
+    margin-bottom: 170px;
+}
+#link>li>a:hover{
+    text-decoration: underline;
+    opacity: 0.6;
+}
+#secondoLogo{
+    text-align: right;
+    font-family: fantasy;
+    margin-right: 50px;
+    font-size: 65px;
+    color: yellow;
+    text-decoration: line-through;
+}
+#contatti{
+    margin-left: 100px;
+    display: inline-block;
+}
+#ilTuoNome,#ilTuoCognome,#laTuaEmail,#laTuaRichiesta{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(225, 239, 38);
+    text-decoration: underline;
+    height: fit-content;
+    font-size: 15px;
+    width: 300px;
+    height: 40px;
+}
+#invia{
+    background-color: rgb(225, 239, 38);
+    color:white;
+    width: 70px;
+    height: 40px;
+}
+#invia:hover{
+    color:aquamarine;
+    text-decoration: underline;
+    opacity: 0.7;
+    border-style: groove;
+    border-radius: 10px;
+}
+#form2{
+    display: inline-block;
+    margin-left: 300px;
+}
+h5{
+    font-size: 25px;
+}
+h4{
+    text-align: center;
+}
+#social-bar {
+    top: 0;
+    margin-top: 100px;
+    bottom: 0;
+    left: 0;
+    margin-left: 100px;
+    height: -moz-fit-content;
+    height: fit-content
+}
+
+#social-bar a {
+    text-align: center;
+    transition: .5s;
+    padding: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff
+}
+
+#social-bar a:hover {
+    opacity: .8;
+    color: #258ce6;
+    border-radius: 10px;
+    border-style: groove
+}
+
+.facebook {
+    background: #3b5998
+}
+
+.instagram {
+    background: #dd2a7b
+}
+
+.twitter {
+    background: #55acee
+}
+.instagram,.twitter{
+  margin-left: 60px;
+}
    #titolo,p{
     text-align: center;
    }
@@ -42,7 +151,9 @@ function testoRandom() {
    }
    html{
     font-size: larger;
-    
+    width: fit-content;
+    overflow-x: hidden;
+    background-color: rgb(225, 239, 38);
    }
    img{
     margin-top: 50px;
@@ -50,63 +161,25 @@ function testoRandom() {
    #immagine{
     text-align: center;
    }
-   footer{
-    font-family: fantasy;
-    text-align: right;
-    font-size:200%;
-}
-footer>h2{
-    margin-top: 100px;
-    color:#303a07;
-    text-decoration:line-through;
-}
-
-#social-bar {
-    display:contents;
-    top:0;
-    bottom:0;
-    margin:auto;
-    left:0;
-    height:fit-content;
-  }
-  #social-bar a {
-    text-align: center;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    padding:15px;
-    font-size: 20px;
-    text-decoration:none;
-    color: white;
-  }
-  #social-bar a:hover {
-    opacity:0.8;
-    color:#258ce6;
-    border-radius: 10px;
-    border-style: groove;
-  }
-  .facebook {
-    background: #3B5998;
-  }
-  .instagram {
-    background: #dd2a7b;
-  }
-  .twitter {
-    background: #55ACEE;
-  }
-  #seguitemi{
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    display: contents;
-  }
   #home,#link1,#link2{
-    color: blue;
-    font-size: large;
-    display: inline;
+    color: #fff;
+    font-size: larger;
     margin-left: 10px;
     text-decoration: none;
   }
+  #logo{
+    position: absolute;
+    left: 20px;
+    top: -17px;
+    font-size: 35px;
+    color: #fff;
+    text-decoration: line-through;
+    font-family: fantasy;
+}
+#logo:hover{
+    color: grey;
+    opacity: 0.9;
+}
   #home:hover{
     text-decoration: underline;
     color: #ffd700;
@@ -120,40 +193,133 @@ footer>h2{
     color: #ffd700;
   }
   #nav{
-    background-color: red;
+    background-color: black;
     height: 50px;
   }
   #home{
     position:absolute;
     top:20px;
-    left:10px;
-    font-size: large;
+    left:900px;
+    font-size: larger;
   }
   #link1{
     position:absolute;
     top:20px;
-    left:70px;
-    font-size: large;
+    left:1000px;
+    font-size: larger;
   }
   #link2{
     position: absolute;
     top:20px;
-    left:200px;
-    font-size: large;
+    left:1190px;
+    font-size: larger;
   }
+
+  @media(min-width: 768px)and (max-width: 1024px) {
+       #home{
+        left: 200px
+       }
+       #link1{
+        left: 300px
+       }
+       #link2{
+        left: 500px;
+       }
+
+
+
+  }
+
+
+
+  /* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+    #immagine{
+      text-align: left;
+    }
+    html,body{
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    #img{
+      margin-left: 10px;
+    }
+    
+    #logo{
+      font-family: cursive;
+      font-size: 30px;
+      margin-left: -2px;
+    }
+    #nav{
+      width: 320px
+    }
+    h2{
+      margin-left: 60px;
+    }
+    #secondoLogo{
+      font-size: 40px;
+      font-family: cursive;
+    }
+    #home,#link1,#link2{
+      font-size: 11px;
+    }
+    #home{
+      left: 135px;
+    }
+    #link1{
+      left: 185px;
+    }
+    #link2{
+      left: 265px
+    }
+    #testo{
+      margin-right: 20px;
+    }
+    .facebook,.instagram,.twitter{
+      margin-left: 10px;
+    }
+    #contatti>li{
+      margin-left: -110px;
+      font-size: 18px;
+    }
+    #form2{
+      margin-left: 40px;
+    }
+    #ilTuoNome,#ilTuoCognome,#laTuaEmail,#laTuaRichiesta{
+      width: fit-content;
+    }
+    h5{
+      font-size: 13px;
+    }
+    h4{
+      margin-left: 20px;
+    }
+    #secondoLogo{
+      text-align: left;
+    }
+
+
+}
 </style>   
 
 </head>
 
 <body>
-<div id="nav"><?php link5() ?></div> 
+<a href='index.php' title='Matteo'><h2 id='logo'>Matteo</h2></a>
+<div id="nav"><b><?php link5() ?></b></div> 
 <?php testoRandom() ?>
-<div id="immagine"><img src= <?php echo $img ?> title="Il mio primo progetto" name="Il mio primo progetto" id="img" alt="Immagine primo progetto" width="300px" height="250px"></div>
+<div id="immagine"><img src=<?php echo $img; ?> title="Il mio primo progetto" name="Il mio primo progetto" id="img" alt="Immagine primo progetto" width="300px" height="250px"></div>
 <hr>
+<!-- I miei finti link + contatti e informazioni -->
 <footer>
-<h2>Matteo</h2>
-  <p id="seguitemi">Seguitemi su</p>
-  <div id="social-bar">
+<br><br><br>
+<div id="social-bar">
   <a href=<?php echo $facebook; ?> class="facebook"> 
       <i class="fa-brands fa-facebook">
       </i>
@@ -166,9 +332,38 @@ footer>h2{
         <i class="fa-brands fa-twitter">
         </i>
       </a>
-  </div>
+  </div>  
+  <ul id='link'>Accesso rapido
+    <li><a href='index.php' title='Vai alla home page'>Home</a></li><br>
+    <li><a href='portfolio.php' title='Vai alla pagina del portfolio'>Portfolio</a></li><br>
+    <li><a href='contatti-e-form.php' title='Vai alla pagina dei contatti'>Contatti + form</a></li><br>
+  </ul>
 
-</footer>
+  <ul id='contatti'>I miei contatti
+    <li>Indirizzo: <strong>Via dei Prati 26, Roma</strong></li><br>
+    <li>Numero di telefono: <strong>+39 3480349156</strong></li><br>
+    <li>Mail: <strong>matteo.malandrino@gmail.com</strong></li>
+  </ul>
+
+  <div id='form2'>
+  <h5>Se hai bisogno di ulteriori informazioni, compila <br> pure questo form</h5>
+  <form action='validazione-form.php' method='post'>
+        <input type='text' id='ilTuoNome' name='nome' minLength='0' maxLength='25' placeholder='Il tuo nome' required><br><br>
+        <input type='text' id='ilTuoCognome' name='cognome' minLength='0' maxLength='25' placeholder='Il tuo cognome' required><br><br>
+        <input type='text' id='laTuaEmail' name='mail' minLength='0' maxLength='40' placeholder='La tua email' required><br><br>
+        <textarea name='Richiesta' id='laTuaRichiesta' minLength='40' maxLength='200' required placeholder='Richiesta'></textarea><br><br>
+        <input type='checkbox' id='spunta-dati'>
+        <label for='spunta-dati'>Acconsento al <br> trattamento <br> dei dati personali</label><br><br>
+        <input type='submit' id='invia' name='Invia'></form></div>
+
+
+
+  <h4>Copyright © 2024 Matteo</h4>
+  
+  <h2 id='secondoLogo'>Matteo</h2>
+
+
+ </footer>
 </body>
 
 

@@ -7,9 +7,9 @@ $twitter = "https://twitter.com/i/flow/login";
 $social = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css";
 require("funzioni.php");
 function pagina() {echo("<h1 id='titolo'>Preventivo</h2>");
-echo("<p id='testo'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor ligula vitae orci feugiat feugiat. Sed ipsum dolor, volutpat vel neque id, volutpat porta nunc. Phasellus vel neque sit amet elit commodo posuere. Praesent efficitur sagittis ipsum at commodo. Nullam aliquam risus at augue elementum tristique.Aenean accumsan convallis faucibus. Vestibulum metus augue, mattis eget mauris in, ultricies viverra magna. Etiam sollicitudin erat et dictum rhoncus. Nullam at nisi at est congue ultrices quis eu nulla.
+echo("<p id='testo'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor ligula vitae orci feugiat feugiat. Sed ipsum dolor, volutpat vel neque id, volutpat porta nunc. Phasellus vel neque sit amet <br> elit commodo posuere. Praesent efficitur sagittis ipsum at commodo. Nullam aliquam risus at augue elementum tristique.Aenean accumsan convallis faucibus. Vestibulum metus augue, mattis eget mauris in, ultricies viverra magna. Etiam sollicitudin erat et dictum rhoncus. Nullam at nisi at est congue ultrices quis eu nulla.
 
-Nullam ultrices nibh eu lectus varius sagittis. Etiam consectetur porta nulla non convallis. Maecenas fermentum ex a placerat dapibus. Morbi congue dolor ac aliquet varius. Donec a dictum ligula. Cras ornare libero at sem ultricies blandit. Vivamus sodales purus ut purus malesuada rhoncus. In commodo velit vitae est condimentum venenatis. Proin tincidunt, eros eget mollis elementum, massa dui ultricies nisi, non blandit ante neque vitae ex. Phasellus scelerisque mauris commodo dui tincidunt sagittis nec quis nulla. Phasellus maximus pharetra eros eget tempus.
+Nullam ultrices nibh eu lectus varius sagittis. Etiam consectetur porta nulla non convallis. Maecenas fermentum ex a placerat dapibus. Morbi congue dolor ac aliquet varius. Donec a dictum ligula. Cras ornare libero at sem ultricies blandit. Vivamus sodales purus ut purus malesuada rhoncus. In commodo velit vitae est <br> condimentum venenatis. Proin tincidunt, eros eget mollis <br> elementum, massa dui ultricies nisi, non blandit ante neque vitae ex. Phasellus scelerisque mauris commodo dui tincidunt sagittis nec quis nulla. Phasellus maximus pharetra eros eget tempus.
 
 Fusce sollicitudin enim et lacus semper egestas. <br><br><br> Nulla eget leo tristique, auctor diam ut, tristique neque. Nulla malesuada consequat erat, in laoreet odio molestie ut. Suspendisse finibus, ante vitae consequat dictum, risus lacus euismod dui, ac molestie velit odio id turpis. Phasellus tellus purus, tempus eget metus id, dapibus accumsan tellus. Aenean rhoncus tellus sed sapien consequat, eu egestas metus tristique. Curabitur faucibus accumsan mi, vitae scelerisque justo venenatis id. Pellentesque nec risus et turpis tincidunt mattis quis a tellus. Mauris nec mattis nulla. Proin laoreet, lectus eget ornare lacinia, purus mi suscipit lacus, nec efficitur sem sapien a nulla. Etiam accumsan lectus lacus, sit amet tincidunt lorem luctus id. Proin interdum sapien feugiat dolor tincidunt, sit amet convallis ligula malesuada. Vivamus rhoncus, purus quis feugiat commodo, augue ligula efficitur neque, a laoreet orci urna nec nisi. Sed hendrerit ullamcorper eros, convallis semper leo convallis sed. Nullam pulvinar, nulla sed bibendum tempor, libero enim mattis eros, non lobortis tellus diam quis orci. Phasellus eu vehicula lacus, sed mollis est.
 
@@ -36,15 +36,139 @@ Pellentesque faucibus mollis orci, in tincidunt ipsum consectetur in. Phasellus 
 
 <head>
     <meta charset="Utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="il mio sito web">
     <title><?php echo $titolo; ?></title>
     <link href=<?php echo $social; ?> type="text/css" rel="stylesheet">
 
     <style>
+      footer{
+    background-color: #5A5A5A;
+    color: whitesmoke;
+    height: fit-content;
+    width: fit-content;
+}
+#link>li>a{
+    text-decoration: none;
+    color: yellow;
+}
+#link>li{
+    margin-top: 10px;
+}
+#contatti>li{
+    margin-top: 10px;
+}
+#link{
+    padding-top: 60px;
+    padding-left: 60px;
+    display: inline-block;
+    margin-bottom: 170px;
+}
+#link>li>a:hover{
+    text-decoration: underline;
+    opacity: 0.6;
+}
+#secondoLogo{
+    text-align: right;
+    font-family: fantasy;
+    margin-right: 50px;
+    font-size: 65px;
+    color: yellow;
+    text-decoration: line-through;
+}
+#contatti{
+    margin-left: 100px;
+    display: inline-block;
+}
+#ilTuoNome,#ilTuoCognome,#laTuaEmail,#laTuaRichiesta{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(225, 239, 38);
+    text-decoration: underline;
+    height: fit-content;
+    font-size: 15px;
+    width: 300px;
+    height: 40px;
+}
+#invia{
+    background-color: rgb(225, 239, 38);
+    color:white;
+    width: 70px;
+    height: 40px;
+}
+#invia:hover{
+    color:aquamarine;
+    text-decoration: underline;
+    opacity: 0.7;
+    border-style: groove;
+    border-radius: 10px;
+}
+#form2{
+    display: inline-block;
+    margin-left: 300px;
+}
+h5{
+    font-size: 25px;
+}
+h4{
+    text-align: center;
+}
+#social-bar {
+    top: 0;
+    margin-top: 100px;
+    bottom: 0;
+    left: 0;
+    margin-left: 100px;
+    height: -moz-fit-content;
+    height: fit-content
+}
+
+#social-bar a {
+    text-align: center;
+    transition: .5s;
+    padding: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff
+}
+
+#social-bar a:hover {
+    opacity: .8;
+    color: #258ce6;
+    border-radius: 10px;
+    border-style: groove
+}
+
+.facebook {
+    background: #3b5998
+}
+
+.instagram {
+    background: #dd2a7b
+}
+
+.twitter {
+    background: #55acee
+}
+.instagram,.twitter{
+  margin-left: 60px;
+}
+#logo{
+    position: absolute;
+    left: 20px;
+    top: -17px;
+    font-size: 35px;
+    color: #fff;
+    text-decoration: line-through;
+    font-family: fantasy;
+}
+#logo:hover{
+    color: grey;
+    opacity: 0.9;
+}
 html{
     font-size: larger;
     color: black;
+    background-color: rgb(225, 239, 38);
 }
 #testo{
   margin-left: 50px;
@@ -58,31 +182,30 @@ h1{
   text-align: center;
 }
 #nav{
-    background-color: red;
+    background-color: black;
     height: 50px;
   }
   #home{
     position:absolute;
     top:20px;
-    left:10px;
-    font-size: large;
+    left:900px;
+    font-size: larger;
   }
   #link1{
     position:absolute;
     top:20px;
-    left:70px;
-    font-size: large;
+    left:1000px;
+    font-size: larger;
   }
   #link2{
     position: absolute;
     top:20px;
-    left:200px;
-    font-size: large;
+    left:1190px;
+    font-size: larger;
   }
   #home,#link1,#link2{
-    color: blue;
-    font-size: 17px;
-    display: inline;
+    color: #fff;
+    font-size: larger;
     margin-left: 10px;
     text-decoration: none;
   }
@@ -98,79 +221,117 @@ h1{
     text-decoration: underline;
     color: #ffd700;
   }
-  footer{
-    font-family: fantasy;
-    text-align: right;
-    font-size:200%;
-}
-footer>h2{
-    margin-top: 100px;
-    color:#303a07;
-    text-decoration:line-through;
-}
-
-#social-bar {
-    display:contents;
-    top:0;
-    bottom:0;
-    margin:auto;
-    left:0;
-    height:fit-content;
-  }
-  #social-bar a {
-    text-align: center;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    padding:15px;
-    font-size: 20px;
-    text-decoration:none;
-    color: white;
-  }
-  #social-bar a:hover {
-    opacity:0.8;
-    color:#258ce6;
-    border-radius: 10px;
-    border-style: groove;
-  }
-  .facebook {
-    background: #3B5998;
-  }
-  .instagram {
-    background: #dd2a7b;
-  }
-  .twitter {
-    background: #55ACEE;
-  }
-  #seguitemi{
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    display: contents;
-  }
+  
   #titolo{
     text-align: center;
   }
+
+
+  /*Tablet*/
+
+
+  @media(min-width: 768px)and (max-width: 1024px) {
+
+    html{
+      font-size: large;
+      overflow-x: hidden;
+    }
+    #home{
+      left: 300px
+    }
+    #link1{
+      left: 400px
+    }
+    #link2{
+      left: 600px
+    }
+    h4{
+      margin-top: 100px;
+    }
+
+
+  }
+  /* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+    #testo{
+      margin-right: 100px;
+    }
+    html,body{
+      overflow-x: hidden;
+      max-width: 100%;
+  }
+    #termini{
+      text-align: left;
+      font-size: 35px;
+    }
+    #testo2{
+      margin-right: 100px;
+    }
+    #logo{
+      font-family: cursive;
+      font-size: 30px;
+    }
+    #secondoLogo{
+      font-size: 40px;
+      font-family: cursive;
+    }
+    #home{
+      left: 140px;
+    }
+    #link1{
+      left: 170px;
+    }
+    #link2{
+      left: 245px
+    }
+    #home,#link1,#link2{
+      font-size: 10px;
+    }
+    .instagram,.twitter{
+      margin-left: 10px;
+    }
+    #contatti{
+      margin-left: -1px;
+      font-size: 15px;
+    }
+    h5{
+      font-size: 15px;
+    }
+    #form2{
+      margin-left: 20px;
+    }
+    #ilTuoNome,#ilTuoCognome,#laTuaEmail,#laTuaRichiesta{
+      width: fit-content;
+    }
+
+}
 
 </style>
 </head>
 
 
 <body>
-<div id="nav"><?php link5() ?></div> 
+<a href='index.php' title='Matteo'><h2 id='logo'>Matteo</h2></a>
+<div id="nav"><b><?php link5() ?></b></div> 
 
 <?php pagina() ?>
 <hr>
-<h1>Termini e condizioni</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat, eros sit amet pretium sodales, lacus felis venenatis dui, lobortis euismod justo nisi sed enim. Praesent at laoreet elit. Cras facilisis efficitur felis, sed venenatis enim laoreet vitae. Nunc id nisl nec diam rhoncus dapibus vitae nec dolor. Mauris elementum odio et nunc ornare, sit amet condimentum metus rutrum. Nam commodo vulputate pellentesque. Quisque consectetur porttitor massa hendrerit rutrum. Nullam malesuada non arcu vitae placerat. Ut facilisis justo pulvinar aliquam imperdiet. Nulla in tortor dui. Sed ac augue nisl. Donec condimentum in risus eu varius. Praesent aliquet molestie ante vel aliquam. Nulla porttitor lectus in libero molestie luctus. Etiam ornare gravida accumsan.
+<h1 id="termini">Termini e condizioni</h1>
+<p id="testo2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat, eros sit amet pretium sodales, lacus felis venenatis dui, lobortis euismod justo nisi sed enim. Praesent at laoreet elit. Cras facilisis efficitur felis, sed venenatis enim laoreet vitae. Nunc id nisl nec diam rhoncus dapibus vitae nec dolor. Mauris elementum odio et nunc ornare, sit amet condimentum metus rutrum. Nam commodo vulputate pellentesque. Quisque consectetur porttitor massa hendrerit rutrum. Nullam malesuada non arcu vitae placerat. Ut facilisis justo pulvinar aliquam imperdiet. Nulla in tortor dui. Sed ac augue nisl. Donec condimentum in risus eu varius. Praesent aliquet molestie ante vel aliquam. Nulla porttitor lectus in libero molestie luctus. Etiam ornare gravida accumsan.
 
 Nam ornare sed orci vitae sagittis. Donec facilisis leo eu nisi finibus hendrerit. Aliquam pulvinar volutpat ante, nec tincidunt massa convallis ac. Nunc felis magna, euismod ut dui id, efficitur molestie enim. Sed semper, tellus nec tempor tempus, ex risus eleifend est, id porttitor dolor lorem et mauris. Quisque pretium turpis at ipsum elementum, eu ultricies velit molestie. Mauris finibus volutpat lectus nec commodo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed ullamcorper sem et tincidunt lobortis. Nam sapien sem, iaculis et orci id, malesuada viverra ex.</p>
 
 <hr>
+<!-- I miei finti link + contatti e informazioni -->
 <footer>
-<h2>Matteo</h2>
-  <p id="seguitemi">Seguitemi su</p>
-  <div id="social-bar">
+<br><br><br>
+<div id="social-bar">
   <a href=<?php echo $facebook; ?> class="facebook"> 
       <i class="fa-brands fa-facebook">
       </i>
@@ -184,8 +345,37 @@ Nam ornare sed orci vitae sagittis. Donec facilisis leo eu nisi finibus hendreri
         </i>
       </a>
   </div>
+  <ul id='link'>Accesso rapido
+    <li><a href='index.php' title='Vai alla home page'>Home</a></li><br>
+    <li><a href='portfolio.php' title='Vai alla pagina del portfolio'>Portfolio</a></li><br>
+    <li><a href='contatti-e-form.php' title='Vai alla pagina dei contatti'>Contatti + form</a></li><br>
+  </ul>
 
-</footer>
+  <ul id='contatti'>I miei contatti
+    <li>Indirizzo: <strong>Via dei Prati 26, Roma</strong></li><br>
+    <li>Numero di telefono: <strong>+39 3480349156</strong></li><br>
+    <li>Mail: <strong>matteo.malandrino@gmail.com</strong></li>
+  </ul>
+
+  <div id='form2'>
+  <h5>Se hai bisogno di ulteriori informazioni, compila <br> pure questo form</h5>
+  <form action='validazione-form.php' method='post'>
+        <input type='text' id='ilTuoNome' name='nome' minLength='0' maxLength='25' placeholder='Il tuo nome' required><br><br>
+        <input type='text' id='ilTuoCognome' name='cognome' minLength='0' maxLength='25' placeholder='Il tuo cognome' required><br><br>
+        <input type='text' id='laTuaEmail' name='mail' minLength='0' maxLength='40' placeholder='La tua email' required><br><br>
+        <textarea name='Richiesta' id='laTuaRichiesta' minLength='40' maxLength='200' required placeholder='Richiesta'></textarea><br><br>
+        <input type='checkbox' id='spunta-dati'>
+        <label for='spunta-dati'>Acconsento al <br> trattamento <br> dei dati personali</label><br><br>
+        <input type='submit' id='invia' name='Invia'></form></div>
+
+
+
+  <h4>Copyright © 2024 Matteo</h4>
+  
+  <h2 id='secondoLogo'>Matteo</h2>
+
+
+ </footer>
 
 
 

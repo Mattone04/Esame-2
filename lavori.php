@@ -1,13 +1,16 @@
-<?php 
-
-$titolo = "Lavori singoli";
+<?php
+/*Ricordarsi di inserire font-family: cursive per mobile nei loghi*/
+require("funzioni.php");
 $facebook = "https://www.facebook.com";
 $instagram = "https://www.instagram.com";
 $twitter = "https://twitter.com/i/flow/login";
 $social = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css";
-require("funzioni.php");
-
+$titolo = "I miei lavori";
+require("public-functions.php");
+use MieClassi\Utility as UT;
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -16,212 +19,273 @@ require("funzioni.php");
 
 <head>
     <meta charset="Utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="il mio sito web">
     <title><?php echo $titolo; ?></title>
     <link href=<?php echo $social; ?> type="text/css" rel="stylesheet">
-    <style>
-     html{
-        font-size: larger;
-     }
-     #nav{
-    background-color: red;
+<style>
+  #nav {
+    background-color: black;
     height: 50px;
-  }
-  #home{
-    position:absolute;
-    top:20px;
-    left:10px;
-    font-size: large;
-  }
-  #link1{
-    position:absolute;
-    top:20px;
-    left:70px;
-    font-size: large;
-  }
-  #link2{
-    position: absolute;
-    top:20px;
-    left:200px;
-    font-size: large;
-  }
-  #home,#link1,#link2{
-    color: blue;
-    font-size: 17px;
-    display: inline;
+    width: 1470px;
+}
+#home,#link1,#link2{
+    color: #fff;
+    font-size: larger;
     margin-left: 10px;
     text-decoration: none;
-  }
-  #home:hover{
-    text-decoration: underline;
-    color: #ffd700;
-  }
-  #link1:hover{
-    text-decoration: underline;
-    color: #ffd700;
-  }
-  #link2:hover{
-    text-decoration: underline;
-    color: #ffd700;
-  }
-  footer{
-    font-family: fantasy;
-    text-align: right;
-    font-size:200%;
-}
-footer>h2{
-    margin-top: 100px;
-    color:#303a07;
-    text-decoration:line-through;
-}
-
-#social-bar {
-    display:contents;
-    top:0;
-    bottom:0;
-    margin:auto;
-    left:0;
-    height:fit-content;
-  }
-  #social-bar a {
-    text-align: center;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    padding:15px;
-    font-size: 20px;
-    text-decoration:none;
-    color: white;
-  }
-  #social-bar a:hover {
-    opacity:0.8;
-    color:#258ce6;
-    border-radius: 10px;
-    border-style: groove;
-  }
-  .facebook {
-    background: #3B5998;
-  }
-  .instagram {
-    background: #dd2a7b;
-  }
-  .twitter {
-    background: #55ACEE;
-  }
-  #seguitemi{
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    display: contents;
-  }
-  h1,p{
-    text-align: right;
-  }
-  #immagine{
-    margin-bottom: 50px;
+    }
+    html{
+      font-size: larger;
+      overflow-x: hidden;
+      width: fit-content;
+      background-color: rgb(225, 239, 38);
+    }
+    #home{
+      position: absolute;
+      left: 900px;
+      top: 15px
+    }
+    #link1{
+        position: absolute;
+        left: 1000px;
+        top: 15px
+    }
+    #link2{
+        position: absolute;
+        left: 1190px;
+        top: 15px
+    }
+    #logo{
     position: absolute;
-    top: 100px;
-    left: 20px;
-  }
-  #testo, #titolo{
-    margin-right: 350px;
-  }
-  /* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
-
-@media (min-width: 1281px) {
-  
-  /* CSS */
-  #testo, #titolo{
-    margin-right: 350px;
-  }
+    left: 30px;
+    top: -17px;
+    font-size: 35px;
+    color: #fff;
+    text-decoration: line-through;
+    font-family: fantasy;
 }
-
-/* 
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-  
-  /* CSS */
-  #testo, #titolo{
+#logo:hover{
+    color: grey;
+    opacity: 0.9;
+}
+#home:hover{
+  text-decoration: underline;
+  color: #ffd700;
+}
+#link1:hover{
+  text-decoration: underline;
+  color: #ffd700;
+}
+#link2:hover{
+  text-decoration: underline;
+  color: #ffd700;
+}
+h1,#align{
+  text-align: center;
+}
+footer{
+    background-color: #5A5A5A;
+    color: whitesmoke;
+    height: fit-content;
+}
+#link>li>a{
+    text-decoration: none;
+    color: yellow;
+}
+#link>li{
+    margin-top: 10px;
+}
+#contatti>li{
+    margin-top: 10px;
+}
+#link{
+    padding-top: 60px;
+    padding-left: 60px;
+    display: inline-block;
+    margin-bottom: 170px;
+}
+#link>li>a:hover{
+    text-decoration: underline;
+    opacity: 0.6;
+}
+#secondoLogo{
+    text-align: right;
+    font-family: fantasy;
     margin-right: 50px;
-  }
+    font-size: 65px;
+    color: yellow;
+    text-decoration: line-through;
+}
+#contatti{
+    margin-left: 100px;
+    display: inline-block;
+}
+#ilTuoNome,#ilTuoCognome,#laTuaEmail,#laTuaRichiesta{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(225, 239, 38);
+    text-decoration: underline;
+    height: fit-content;
+    font-size: 15px;
+    width: 300px;
+    height: 40px;
+}
+#invia{
+    background-color: rgb(225, 239, 38);
+    color:white;
+    width: 70px;
+    height: 40px;
+}
+#invia:hover{
+    color:aquamarine;
+    text-decoration: underline;
+    opacity: 0.7;
+    border-style: groove;
+    border-radius: 10px;
+}
+#form2{
+    display: inline-block;
+    margin-left: 300px;
+}
+h5{
+    font-size: 25px;
+}
+h4{
+    text-align: center;
+}
+#social-bar {
+    top: 0;
+    margin-top: 100px;
+    bottom: 0;
+    left: 0;
+    margin-left: 100px;
+    height: -moz-fit-content;
+    height: fit-content
 }
 
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  
-  /* CSS */
-  #testo, #titolo{
-    margin-right: 50px;
-  }
+#social-bar a {
+    text-align: center;
+    transition: .5s;
+    padding: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff
 }
 
-/* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  
-  /* CSS */
-  #testo, #titolo{
-    margin-right: 50px;
-  }
+#social-bar a:hover {
+    opacity: .8;
+    color: #258ce6;
+    border-radius: 10px;
+    border-style: groove
 }
 
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-
-@media (min-width: 481px) and (max-width: 767px) {
-  
-  /* CSS */
-  #testo, #titolo{
-    margin-right: 50px;
-  }
+.facebook {
+    background: #3b5998
 }
 
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
+.instagram {
+    background: #dd2a7b
+}
+
+.twitter {
+    background: #55acee
+}
+.instagram,.twitter{
+  margin-left: 60px;
+}
+@media(min-width: 768px)and (max-width: 1024px) {
+       #home{
+        left: 200px
+       }
+       #link1{
+        left: 300px
+       }
+       #link2{
+        left: 500px;
+       }
+       html{
+        overflow-x: hidden;
+        max-width: 100%;
+       }
+
+
+
+  }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  
-  /* CSS */
-  #testo, #titolo{
-    margin-right: 50px;
-  }
+
+    html,body{
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    #home,#link1,#link2{
+      font-size: 11px;
+    }
+    #home{
+      left: 135px;
+    }
+    #link1{
+      left: 185px;
+    }
+    #link2{
+      left: 265px
+    }
+    #logo,#secondoLogo{
+       font-family: cursive;
+    }
+    .facebook,.instagram,.twitter{
+      margin-left: 10px;
+    }
+    #contatti>li{
+      margin-left: -110px;
+      font-size: 18px;
+    }
+    #form2{
+      margin-left: 40px;
+    }
+    #ilTuoNome,#ilTuoCognome,#laTuaEmail,#laTuaRichiesta{
+      width: fit-content;
+    }
+    h5{
+      font-size: 13px;
+    }
+    h4{
+      margin-left: -50px;
+    }
+    #secondoLogo{
+      text-align: left;
+      margin-left: 20px;
+      font-family: cursive;
+    }
+
+
 }
-
-    </style>
-
+</style>
 </head>
-
 <body>
-<div id="nav"><?php link5() ?></div>
-<h1 id="titolo">Il mio lavoro</h1>
+<a href='index.php' title='Matteo'><h2 id='logo'>Matteo</h2></a>
+<div id='nav'><b><?php link5() ?></b></div>
+<?php
+ini_set("auto_detect_line_endings", true);
+$file = "lavori.json";
+$arrJSON = json_decode(UT::leggiTesto($file));
+$ID = UT::richiestaHTTP("id");
+$ID = ($ID == null) ? 1 : $ID;
+$a = $_GET["id"];
+ 
+    
+  
 
-<p id="testo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Vestibulum vitae vestibulum eros, vitae vulputate magna. <br> Phasellus finibus nulla quis ex euismod, nec luctus lectus cursus. <br><br><br> Maecenas rhoncus dapibus eros, id egestas nibh lobortis non. <br> Phasellus ullamcorper eu elit auctor aliquam. <br> Aliquam vestibulum odio et congue dignissim. <br> Cras augue est, feugiat in est sed, interdum mattis lorem. <br><br><br> Vivamus non dui tincidunt, consequat nulla ut, blandit augue. <br> Suspendisse vel bibendum lectus. <br> Curabitur laoreet lorem in augue varius, ut accumsan erat commodo. <br><br><br> Integer fringilla eu nisi non vulputate. <br> Lorem, vehicula dapibus lacus nec, efficitur elementum quam. <br> Nunc semper vestibulum lectus, at euismod lorem condimentum ac. <br><br><br> Vivamus efficitur dolor eu mollis vestibulum. <br> Mauris eu consectetur ante. <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Suspendisse vehicula neque sit amet mauris tempor, vel accumsan nulla vulputate. <br><br><br> Pellentesque aliquet urna diam, at molestie tellus varius et. <br> Vivamus a dolor quis justo pellentesque venenatis ac quis nibh. <br> Aenean in ultrices sem, id imperdiet nibh. <br><br><br> Aenean viverra nunc augue, nec cursus quam varius sed. <br> Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. <br> Donec pharetra magna ut neque lobortis, eget scelerisque tellus aliquet. <br><br><br> Morbi luctus malesuada lectus, eget dictum magna accumsan vulputate. <br> Donec efficitur, urna vel tincidunt convallis, <br> magna turpis imperdiet augue, <br> vitae egestas orci velit sit amet enim. <br><br><br> Proin id ipsum nec mauris pharetra ullamcorper non sit amet turpis. <br> Pellentesque eget elit pharetra, laoreet quam eu, aliquet ipsum. <br><br><br>
+?>
 
-Nunc maximus, orci a porttitor fermentum, diam odio aliquet quam, nec vestibulum elit enim id urna. <br> Donec erat arcu, euismod et justo volutpat, ultrices tempus dui. <br><br><br> Nulla accumsan, dui id pretium ornare, lacus orci luctus elit, eu convallis eros elit eu nunc. <br> Nam a erat et est lobortis ultricies quis vel magna. <br> Nunc sed pulvinar justo, eu feugiat risus. <br><br><br> Vivamus ut ipsum non sem scelerisque posuere. <br> Aliquam sed ligula ultrices, rutrum quam ut, tempor turpis. <br> Donec non leo sed nisl pretium consectetur. <br><br><br> Vestibulum aliquam, <br> enim sit amet tempus varius, <br> est dolor molestie nunc, <br> ut tincidunt ex metus tempus lacus.</p>
-<img src="https://cdn.discordapp.com/attachments/906882508635926608/1202543405226270800/lavori.png?ex=65cdd6d1&is=65bb61d1&hm=d1d2f4e9a024febc1370af891366d90383e74e6cbad138c406dd9f2f57c74b32&" alt="Lavori" id="immagine" name="Lavori" width="400px" height="390px">
+<?php printf("<h1>%s</h1>", $arrJSON[$ID - 1]->testo); 
+printf("<div id='align'><figure><img alt=%s width='300px' name='%s' title='%s' src='%s'><figcaption>%s</figcaption></figure></div>", $arrJSON[$ID - 1]->testo, $arrJSON[$ID - 1]->testo, $arrJSON[$ID - 1]->testo, $arrJSON[$ID - 1]->immagine, $arrJSON[$ID - 1]->descrizione); ?>
 <hr>
+
+<!-- I miei finti link + contatti e informazioni -->
 <footer>
-<h2>Matteo</h2>
-  <p id="seguitemi">Seguitemi su</p>
-  <div id="social-bar">
+<br><br><br>
+<div id="social-bar">
   <a href=<?php echo $facebook; ?> class="facebook"> 
       <i class="fa-brands fa-facebook">
       </i>
@@ -234,11 +298,37 @@ Nunc maximus, orci a porttitor fermentum, diam odio aliquet quam, nec vestibulum
         <i class="fa-brands fa-twitter">
         </i>
       </a>
-  </div>
+</div>
+  <ul id='link'>Accesso rapido
+    <li><a href='index.php' title='Vai alla home page'>Home</a></li><br>
+    <li><a href='portfolio.php' title='Vai alla pagina del portfolio'>Portfolio</a></li><br>
+    <li><a href='contatti-e-form.php' title='Vai alla pagina dei contatti'>Contatti + form</a></li><br>
+  </ul>
 
-</footer>
+  <ul id='contatti'>I miei contatti
+    <li>Indirizzo: <strong>Via dei Prati 26, Roma</strong></li><br>
+    <li>Numero di telefono: <strong>+39 3480349156</strong></li><br>
+    <li>Mail: <strong>matteo.malandrino@gmail.com</strong></li>
+  </ul>
+
+  <div id='form2'>
+  <h5>Se hai bisogno di ulteriori informazioni, compila <br> pure questo form</h5>
+  <form action='validazione-form.php' method='post'>
+        <input type='text' id='ilTuoNome' name='nome' minLength='0' maxLength='25' placeholder='Il tuo nome' required><br><br>
+        <input type='text' id='ilTuoCognome' name='cognome' minLength='0' maxLength='25' placeholder='Il tuo cognome' required><br><br>
+        <input type='text' id='laTuaEmail' name='mail' minLength='0' maxLength='40' placeholder='La tua email' required><br><br>
+        <textarea name='Richiesta' id='laTuaRichiesta' minLength='40' maxLength='200' required placeholder='Richiesta'></textarea><br><br>
+        <input type='checkbox' id='spunta-dati'>
+        <label for='spunta-dati'>Acconsento al <br> trattamento <br> dei dati personali</label><br><br>
+        <input type='submit' id='invia' name='Invia'></form></div>
 
 
+
+  <h4>Copyright © 2024 Matteo</h4>
+  
+  <h2 id='secondoLogo'>Matteo</h2>
+
+
+ </footer>
 </body>
-
 </html>

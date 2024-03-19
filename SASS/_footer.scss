@@ -1,30 +1,11 @@
 /*Layout footer per risparmiare righe di codice*/
-footer{
-    font-family: fantasy;
-    text-align: right;
-    font-size:200%;
-}
-footer>h2{
-    margin-top: 100px;
-    color:#303a07;
-    text-decoration:line-through;
-}
-
-#social-bar {
-    display:contents;
-    top:0;
-    bottom:0;
-    margin:auto;
-    left:0;
-    height:fit-content;
-  }
   #social-bar a {
-    text-align: center;
     -webkit-transition: 0.5s;
+    
     -o-transition: 0.5s;
     transition: 0.5s;
     padding:15px;
-    font-size: 20px;
+    font-size: 10px;
     text-decoration:none;
     color: white;
   }
@@ -42,11 +23,4 @@ footer>h2{
   }
   .twitter {
     background: #55ACEE;
-  }
-  #seguitemi{
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    display: contents;
-
   }

@@ -2,32 +2,22 @@
 /**
  * Pagina home del sito + chi sono + servizi
 */
-$read = file_get_contents('servizi-e-prodotti.json');
-json_decode($read);
-$json = json_encode($read,true);
 $titolo = "Il mio sito web";
 $michiamo = "Mi chiamo";
 $nome = "Matteo Malandrino";
 $professione = "Sono un <strong>full-stack developer</strong>";
-$img = "https://cdn.discordapp.com/attachments/906882508635926608/1179003537993248818/logo-apple-300x188.png?ex=65a6581c&is=6593e31c&hm=5c5759f8f597ef0dc91e491fb907061d6f3e022cbcfee23a98ca50847e3ff3b2&";
+$img = "https://www.addlance.com/blog/wp-content/uploads/2016/10/logo-apple-300x188.png";
 $social = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css";
-$altro = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor mauris nulla, id ornare lorem dapibus ut. Vestibulum consectetur ultricies lacus, sit amet condimentum lectus fringilla in. Aenean dapibus metus sit amet ante volutpat molestie. Morbi vehicula, risus quis pharetra rhoncus, justo nisi consectetur nisi, eget rutrum orci nisl vel ex.";
+$altro = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor mauris nulla, id ornare lorem dapibus ut. <br> Vestibulum consectetur ultricies lacus, sit amet condimentum lectus fringilla in.";
+$altro2 = "Aenean varius vestibulum suscipit. Nulla facilisi. Aliquam quis ex enim. Curabitur non dolor vitae orci fermentum hendrerit ullamcorper id sapien. Vivamus vel mi porttitor, porttitor arcu eget, tempus arcu. Ut et nibh quam.";
+$altro3 = "Integer facilisis erat a ligula ultricies vehicula. Aenean imperdiet nibh et felis iaculis, vel pulvinar velit elementum. Pellentesque malesuada volutpat odio, vel pellentesque justo tristique bibendum.";
 $contattami = "Contattami";
-function servizi() {
-  echo("<div id='frontend' class='col-1'><h3>Front-end</h3>
-   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mauris libero, elementum ac mollis fringilla, tristique sed quam. Aliquam hendrerit viverra convallis. Pellentesque tincidunt leo dui, vel faucibus turpis mattis ac.</p></div>
-   <div id='backend' class='col-2'><h3>Back-end</h3>
-   <p>Maecenas nec ultrices sem, vel consectetur ligula. Praesent quis vestibulum turpis. Duis finibus nulla ac quam consequat scelerisque. Proin bibendum sem ac tempor convallis. Suspendisse arcu urna, maximus eu scelerisque luctus, ultrices nec sem.</p></div>
-   <div id='web-designing' class='col3'><h3>Web design</h3>
-   <p>Cras et lacus hendrerit, suscipit dui vestibulum, tincidunt mauris. Integer purus massa, tempus elementum sapien facilisis, vulputate suscipit libero. In ex turpis, condimentum et pellentesque quis, malesuada ac erat.</p></div>
-   <div id='cloud-engineering' class='col-4'><h3>Cloud Engineering</h3>
-   <p>Phasellus placerat massa ut neque porttitor imperdiet. Phasellus maximus risus placerat ligula faucibus, eu sagittis est dapibus.</p></div>");
-
-}
 $facebook = "https://www.facebook.com";
 $instagram = "https://www.instagram.com";
 $twitter = "https://twitter.com/i/flow/login";
-require("funzioni.php")
+require("funzioni.php");
+require("public-functions.php");
+use MieClassi\Utility as UT;
 
 
 
@@ -40,56 +30,86 @@ require("funzioni.php")
 
 <head>
     <meta charset="Utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="il mio sito web">
     <title><?php echo $titolo; ?></title>
     <link href=<?php echo $social; ?> type="text/css" rel="stylesheet">
     <link href="css/index.min.css" type="text/css" rel="stylesheet">
 
 </head>
-
 <body>
-
  <!-- Presentazione sito (chi sono) -->
- <div id="nav">
-  <?php link2() ?>
- </div>
- <div id="chi-sono">
-  
-
+ <a href='index.php' title='Matteo'><h2 id='logo'>Matteo</h2></a>
+  <div id='nav'><b><?php link2() ?></b></div>
+ 
+ 
+<div id='chi-sono'>
 
  <h2 id="mi-chiamo"><?php echo $michiamo; ?></h2><br>
  <h1 id="nome"><?php echo $nome; ?></h1>
  <p id="professione"><?php echo $professione; ?></p>
+</div>
+ 
  
 
- </div>
+ <div>
  <form action="preventivo.php" method="post">
-<button id="bottone" type="submit">Chiedici un preventivo</button>
- </form>
+<button id="bottone" type="submit">Chiedici un preventivo</button></form></div>
 
- <div><img src=<?php echo $img; ?> id="logo-Apple" title="Logo Apple full-stack developer"></div>
 
+<div id='img'> <img src=<?php echo $img; ?> id="logo-Apple" title="Logo Apple full-stack developer"></div>
  <hr>
-   <img id="imgAltro" name="Informazioni personali" title="Informazioni personali" alt="Informazioni personali" src="https://cdn.discordapp.com/attachments/906882508635926608/1199651083941855282/info.jpeg?ex=65c35122&is=65b0dc22&hm=abf764f953dca406c91eca12b7612aa40677477f46a36e6c5bd007f24d1343e9&">
-    <div id="altro">
-      <h2>Informazioni personali</h2>
-      <p><?php echo $altro; ?></p>
-    </div>
+ 
+   <img id="imgAltro" name="Informazioni" title="Informazioni" alt="Informazioni" src="https://www.ticonsiglio.com/wp-content/uploads/2023/01/smart-working-lavoro.jpg">
+    <div id='altro'>
+      <h2 id="info">Informazioni sulla nostra azienda</h2>
+      <h3>Di cosa ci occupiamo</h3>
+      <p id="testo"><?php echo $altro; ?></p>
+      <hr>
+      <h3>Perché sceglierci</h3>
+      <p id="testo2"><?php echo $altro2 ?></p>
+      <hr>
+      <h3>Le nostre priorità per il cliente</h3>
+      <p id="testo3"><?php echo $altro3 ?></p>
+   </div>
  <hr>
+ <div id='elenco'>
  <h2 id="servizi">I nostri servizi e progetti</h2>
- <?php servizi() ?>
-  <h2 id="progetto-1"><a id="link-progetto" href="progetto-front-end.php">Progetto front-end developer</a></h2>
-  <h2 id="progetto-2"><a id="link-progetto2" href="progetto-back-end.php">Progetto back-end developer</a></h2>
-  <h2 id="progetto-3"><a id="link-progetto3" href="progetto-web-design.php">Progetto web design</a></h2>
-  <h2 id="progetto-4"><a id="link-progetto4" href="progetto-cloud-engineering.php">Progetto cloud engineering</a></h2>
+ <?php
+ini_set("auto_detect_line_endings", true);
+$file = "servizi-e-progetti.json";
+$arrJSON = json_decode(UT::leggiTesto($file));
+$ID = UT::richiestaHTTP("id");
+$ID = ($ID == null) ? 1 : $ID;
+$file2 = "cat2.json";
+$arrCat = json_decode(UT::leggiTesto($file2));
+echo "<ul>";
+foreach($arrCat as $categoria){
+    //creo elementi LI della lista delle categorie
+    echo "<li>". $categoria->cat;
+    echo ": ". $categoria->testo. "<br><br><br>";
+    //faccio un altro ciclo foreach sui lavori
+    foreach($arrJSON as $progetti){
+    //controllo (if) se la categoria è uguale alla categoria del lavoro
+    if($progetti->idcat==$categoria->id){
+    //se uguale scrivo LI del lavoro
+    $n = $progetti->id;
+    $classeID = ($n == $ID) ? ' class="id"' : '';
+    printf('<ul><li %s><a href="%s?id=%u" title="%s" >%s</a><h3 id="scritta">Quali sono i vantaggi di questi servizi e progetti?</h3><p id="loremIpsum">%s</p></li></ul><br><br>', $classeID, $progetti->link, $progetti->id, $progetti->title, $progetti->testo, $progetti->scritta);
+    echo "</li>";  
+  
+  
+}}}
+?></div>
+ <hr>
+ <h1 id='team'>Il nostro team di sviluppo</h1>
+ <div id='align1'><p><strong>Leonida Rossi</strong></p><u><p>Software Architect</p></u><img src='https://cdn.discordapp.com/attachments/906882508635926608/1215664684997414952/portrait-beautiful-young-woman-standing-grey-wall_231208-10760.png?ex=65fd92f6&is=65eb1df6&hm=e756ff6c564a90582207b7c45b4b871f0db154d4ea7e2216a3fe711d21fdd993&' width='350px' alt='Membro 1' name='Membro 1' id='membro-1' title='Primo membro del team'></div><div id='align2'><p><strong>Cristiano Barese</strong></p><p><u>Mobile App Developer</u></p><img src='https://cdn.discordapp.com/attachments/906882508635926608/1215669704912408666/depositphotos_188781580-stock-photo-handsome-cheerful-young-man-standing.png?ex=65fd97a3&is=65eb22a3&hm=4ac7ec86a954d0e4317780820802e29e545a08a689d308461b1c6348d7364200&' width="350px" alt='Membro 2' name='Membro 2' id='membro-2' title='Secondo membro del team'></div><div id='align3'><p><strong>Assunta Milanesi</strong></p><u><p>Data Scientist</p></u><img src='https://cdn.discordapp.com/attachments/906882508635926608/1215677647556714496/images.png?ex=65fd9f09&is=65eb2a09&hm=45c954d5f73f371beb0f3f149968663efa2dd266a5fb1fc90ab369d5d8b6632a&' alt='Membro 3' name='Membro 3' id='membro-3' title='Terzo membro del team' width="350px" height="235px"></div><div id='align4'><p id='matteo'><strong>Matteo Malandrino</strong></p><u><p id='founder'>Founder (CEO)</p></u><img src='https://cdn.discordapp.com/attachments/906882508635926608/1215680668479135785/maglie-ai-ferri-uomo-modello-pullover-lana-grossa-merino-superiore.png?ex=65fda1d9&is=65eb2cd9&hm=571e69e76355b6cfdc025bf4b229a6518be1adb69a15666ee41e1f3ac92b7735&' alt='Membro 4' name='Membro 4' id='membro-4' title='Quarto membro del team' width='350px' height="235px"></div>
  <hr>
  <br><br><br>
- <!-- Il mio finto logo e social -->
+ <!-- I miei finti link + contatti e informazioni -->
  <footer>
-  <h2>Matteo</h2>
-  <p id="seguitemi">Seguitemi su</p>
-  <div id="social-bar">
+  <br><br><br>
+ <div id="social-bar">
   <a href=<?php echo $facebook; ?> class="facebook"> 
       <i class="fa-brands fa-facebook">
       </i>
@@ -103,7 +123,35 @@ require("funzioni.php")
         </i>
       </a>
   </div>
+  <ul id='link'>Accesso rapido
+    <li><a href='index.php' title='Vai alla home page'>Home</a></li><br>
+    <li><a href='portfolio.php' title='Vai alla pagina del portfolio'>Portfolio</a></li><br>
+    <li><a href='contatti-e-form.php' title='Vai alla pagina dei contatti'>Contatti + form</a></li><br>
+  </ul>
+
+  <ul id='contatti'>I miei contatti
+    <li>Indirizzo: <strong>Via dei Prati 26, Roma</strong></li><br>
+    <li>Numero di telefono: <strong>+39 3480349156</strong></li><br>
+    <li>Mail: <strong>matteo.malandrino@gmail.com</strong></li>
+  </ul>
+
+  <div id='form2'>
+  <h5>Se hai bisogno di ulteriori informazioni, <br> compila pure questo form</h5>
+  <form id='secondoForm' action='validazione-form.php' method='post'>
+        <input type='text' id='ilTuoNome' name='nome' minlength="0" maxlength="25" placeholder='Il tuo nome' required><br><br>
+        <input type='text' id='ilTuoCognome' name='cognome' minlength="0" maxlength="25" placeholder='Il tuo cognome' required><br><br>
+        <input type='text' id='laTuaEmail' name='mail' minlength="0" maxlength="40" placeholder='La tua email' required><br><br>
+        <textarea minlength="40" maxlength="200" name='Richiesta' id='laTuaRichiesta' required placeholder='Richiesta'></textarea><br><br>
+        <input type='checkbox' id='spunta-dati'>
+        <label for='spunta-dati'>Acconsento al <br> trattamento <br> dei dati personali</label><br><br>
+        <input type='submit' id='invia' name='Invia'></form></div>
+
+
+
+  <h4>Copyright © 2024 Matteo</h4>
   
+  <h2 id='secondoLogo'>Matteo</h2>
+
 
  </footer>
 </body>

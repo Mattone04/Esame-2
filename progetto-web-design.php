@@ -2,13 +2,13 @@
 
 $titolo = "Progetto 3";
 $social = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css";
-$img = "https://cdn.discordapp.com/attachments/906882508635926608/1201823473186656297/web-design-progetto.jpg?ex=65cb3854&is=65b8c354&hm=4643691839d4a0da8913ddf059313a28c751bbfaaa5c3f8a9fefc2de6fcc76aa&";
+$img = "https://studiograficorosati.it/wp-content/uploads/2021/06/Le-innovazioni-nel-web-design.jpg";
 $facebook = "https://www.facebook.com";
 $instagram = "https://www.instagram.com";
 $twitter = "https://twitter.com/i/flow/login";
 require("funzioni.php");
 function testoRandom3() {
-    echo("<h2 id='titolo'>Il nostro terzo progetto</h2>");
+    echo("<h2 id='titolo'>Progetto <br> web design</h2>");
     echo("<p id='testo'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus est non arcu tempor volutpat. Cras eleifend ligula vitae lorem dapibus, eu bibendum arcu vulputate. Vestibulum a massa consectetur, rutrum dolor bibendum, tincidunt neque. Nulla bibendum dapibus sapien, eu tempus nisi elementum eget. Morbi nec faucibus felis. In finibus eros leo, ut gravida ligula scelerisque in. Phasellus scelerisque placerat lorem et pretium. Aliquam quis erat in dolor sodales convallis a vitae lorem. Maecenas non tincidunt odio. Phasellus at dolor velit. Nunc tempus eget dolor at consectetur. Sed fringilla, metus quis semper lacinia, velit velit sollicitudin velit, sed condimentum augue lacus a dui.
 
     Integer eu laoreet massa. Nam id purus lectus. Curabitur id venenatis ante, nec suscipit felis. Aenean iaculis sem non sem feugiat ultrices. Sed ultrices aliquet ligula, non dignissim nunc volutpat varius. Vestibulum ut hendrerit metus, et mattis velit. <br><br><br> Vivamus elementum egestas dictum. Fusce vitae porttitor mi. Aenean erat eros, porta quis vulputate eget, pulvinar sit amet nunc. Quisque fermentum, lacus a feugiat venenatis, erat massa condimentum est, eget pretium nisl enim in nisl. Ut pharetra, sapien eget cursus commodo, orci lectus ultrices odio, vel finibus turpis orci et magna. Etiam pharetra augue et turpis lacinia mollis.
@@ -28,11 +28,134 @@ function testoRandom3() {
 
 <head>
     <meta charset="Utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="il mio sito web">
     <title><?php echo $titolo; ?></title>
     <link href=<?php echo $social; ?> type="text/css" rel="stylesheet">
     <style>
+      footer{
+    background-color: #5A5A5A;
+    color: whitesmoke;
+    height: fit-content;
+    width: fit-content;
+}
+#link>li>a{
+    text-decoration: none;
+    color: yellow;
+}
+#link>li{
+    margin-top: 10px;
+}
+#contatti>li{
+    margin-top: 10px;
+}
+#link{
+    padding-top: 60px;
+    padding-left: 60px;
+    display: inline-block;
+    margin-bottom: 170px;
+}
+#link>li>a:hover{
+    text-decoration: underline;
+    opacity: 0.6;
+}
+#secondoLogo{
+    text-align: right;
+    font-family: fantasy;
+    margin-right: 50px;
+    font-size: 65px;
+    color: yellow;
+    text-decoration: line-through;
+}
+#contatti{
+    margin-left: 100px;
+    display: inline-block;
+}
+#ilTuoNome,#ilTuoCognome,#laTuaEmail,#laTuaRichiesta{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(225, 239, 38);
+    text-decoration: underline;
+    height: fit-content;
+    font-size: 15px;
+    width: 300px;
+    height: 40px;
+}
+#invia{
+    background-color: rgb(225, 239, 38);
+    color:white;
+    width: 70px;
+    height: 40px;
+}
+#invia:hover{
+    color:aquamarine;
+    text-decoration: underline;
+    opacity: 0.7;
+    border-style: groove;
+    border-radius: 10px;
+}
+#form2{
+    display: inline-block;
+    margin-left: 300px;
+}
+h5{
+    font-size: 25px;
+}
+h4{
+    text-align: center;
+}
+#social-bar {
+    top: 0;
+    margin-top: 100px;
+    bottom: 0;
+    left: 0;
+    margin-left: 100px;
+    height: -moz-fit-content;
+    height: fit-content
+}
+
+#social-bar a {
+    text-align: center;
+    transition: .5s;
+    padding: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff
+}
+
+#social-bar a:hover {
+    opacity: .8;
+    color: #258ce6;
+    border-radius: 10px;
+    border-style: groove
+}
+
+.facebook {
+    background: #3b5998
+}
+
+.instagram {
+    background: #dd2a7b
+}
+
+.twitter {
+    background: #55acee
+}
+.instagram,.twitter{
+  margin-left: 60px;
+}
+#logo{
+    position: absolute;
+    left: 20px;
+    top: -17px;
+    font-size: 35px;
+    color: #fff;
+    text-decoration: line-through;
+    font-family: fantasy;
+}
+#logo:hover{
+  opacity: 0.9;
+  color: grey;
+}
    #titolo,p{
     text-align: center;
    }
@@ -42,6 +165,7 @@ function testoRandom3() {
    }
    html{
     font-size: larger;
+    background-color: rgb(225, 239, 38);
    }
    img{
     margin-top: 50px;
@@ -49,60 +173,9 @@ function testoRandom3() {
    #immagine{
     text-align: center;
    }
-   footer{
-    font-family: fantasy;
-    text-align: right;
-    font-size:200%;
-}
-footer>h2{
-    margin-top: 100px;
-    color:#303a07;
-    text-decoration:line-through;
-}
-
-#social-bar {
-    display:contents;
-    top:0;
-    bottom:0;
-    margin:auto;
-    left:0;
-    height:fit-content;
-  }
-  #social-bar a {
-    text-align: center;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    padding:15px;
-    font-size: 20px;
-    text-decoration:none;
-    color: white;
-  }
-  #social-bar a:hover {
-    opacity:0.8;
-    color:#258ce6;
-    border-radius: 10px;
-    border-style: groove;
-  }
-  .facebook {
-    background: #3B5998;
-  }
-  .instagram {
-    background: #dd2a7b;
-  }
-  .twitter {
-    background: #55ACEE;
-  }
-  #seguitemi{
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    display: contents;
-  }
   #home,#link1,#link2{
-    color: blue;
-    font-size: large;
-    display: inline;
+    color: #fff;
+    font-size: larger;
     margin-left: 10px;
     text-decoration: none;
   }
@@ -119,41 +192,127 @@ footer>h2{
     color: #ffd700;
   }
   #nav{
-    background-color: red;
+    background-color: black;
     height: 50px;
   }
   #home{
     position:absolute;
     top:20px;
-    left:10px;
-    font-size: large;
+    left:900px;
+    font-size: larger;
   }
   #link1{
     position:absolute;
     top:20px;
-    left:70px;
-    font-size: large;
+    left:1000px;
+    font-size: larger;
   }
   #link2{
     position: absolute;
     top:20px;
-    left:200px;
-    font-size: large;
+    left:1190px;
+    font-size: larger;
   }
+  @media(min-width: 768px)and (max-width: 1024px) {
+       #home{
+        left: 200px
+       }
+       #link1{
+        left: 300px
+       }
+       #link2{
+        left: 500px;
+       }
+
+
+
+  }
+  
+  /* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+  #img{
+    width: 200px;
+    margin-left: 10px;
+  }
+  #immagine{
+      text-align: left;
+    }
+    #home,#link1,#link2{
+      font-size: 11px;
+    }
+    #home{
+      left: 135px;
+    }
+    #link1{
+      left: 185px;
+    }
+    #link2{
+      left: 265px
+    }
+    #testo{
+      margin-right: 10px;
+    }
+   #titolo{
+    text-align: left;
+    margin-left: 20px;
+   }
+    html,body{
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    #logo{
+      font-family: cursive;
+      font-size: 30px;
+    }
+    .facebook,.instagram,.twitter{
+      margin-left: 10px;
+    }
+    #contatti>li{
+      margin-left: -110px;
+      font-size: 18px;
+    }
+    #form2{
+      margin-left: 40px;
+    }
+    #ilTuoNome,#ilTuoCognome,#laTuaEmail,#laTuaRichiesta{
+      width: fit-content;
+    }
+    h5{
+      font-size: 13px;
+    }
+    h4{
+      margin-left: -50px;
+    }
+    #secondoLogo{
+      text-align: left;
+      margin-left: 20px;
+      font-family: cursive;
+    }
+
+
+
+}
 </style>
 
 </head>
 
 <body>
-<div id="nav"><?php link5() ?></div>
+<a href='index.php' title='Matteo'><h2 id='logo'>Matteo</h2></a>
+<div id="nav"><b><?php link5() ?></b></div>
 <?php testoRandom3() ?>
 <div id="immagine"><img src= <?php echo $img ?> title="Il mio terzo progetto" name="Il mio terzo progetto" id="img" alt="Immagine terzo progetto" width="500px" height="300px"></div>
 <hr>
+<!-- I miei finti link + contatti e informazioni -->
 <footer>
-<h2>Matteo</h2>
-  <p id="seguitemi">Seguitemi su</p>
-  <div id="social-bar">
-  <a href=<?php echo $facebook; ?> class="facebook"> 
+<br><br><br>
+<div id='social-bar'>
+<a href=<?php echo $facebook; ?> class="facebook"> 
       <i class="fa-brands fa-facebook">
       </i>
     </a>
@@ -165,9 +324,38 @@ footer>h2{
         <i class="fa-brands fa-twitter">
         </i>
       </a>
-  </div>
+  </div>  
+  <ul id='link'>Accesso rapido
+    <li><a href='index.php' title='Vai alla home page'>Home</a></li><br>
+    <li><a href='portfolio.php' title='Vai alla pagina del portfolio'>Portfolio</a></li><br>
+    <li><a href='contatti-e-form.php' title='Vai alla pagina dei contatti'>Contatti + form</a></li><br>
+  </ul>
 
-</footer>
+  <ul id='contatti'>I miei contatti
+    <li>Indirizzo: <strong>Via dei Prati 26, Roma</strong></li><br>
+    <li>Numero di telefono: <strong>+39 3480349156</strong></li><br>
+    <li>Mail: <strong>matteo.malandrino@gmail.com</strong></li>
+  </ul>
+
+  <div id='form2'>
+  <h5>Se hai bisogno di ulteriori informazioni, compila <br> pure questo form</h5>
+  <form action='validazione-form.php' method='post'>
+        <input type='text' id='ilTuoNome' name='nome' minLength='0' maxLength='25' placeholder='Il tuo nome' required><br><br>
+        <input type='text' id='ilTuoCognome' name='cognome' minLength='0' maxLength='25' placeholder='Il tuo cognome' required><br><br>
+        <input type='text' id='laTuaEmail' name='mail' minLength='0' maxLength='40' placeholder='La tua email' required><br><br>
+        <textarea name='Richiesta' id='laTuaRichiesta' minLength='40' maxLength='200' required placeholder='Richiesta'></textarea><br><br>
+        <input type='checkbox' id='spunta-dati'>
+        <label for='spunta-dati'>Acconsento al <br> trattamento <br> dei dati personali</label><br><br>
+        <input type='submit' id='invia' name='Invia'></form></div>
+
+
+
+  <h4>Copyright © 2024 Matteo</h4>
+  
+  <h2 id='secondoLogo'>Matteo</h2>
+
+
+ </footer>
 </body>
 
 </html>

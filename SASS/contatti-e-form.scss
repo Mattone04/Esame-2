@@ -2,6 +2,117 @@
 @import "footer";
 @import "variabili";
 
+footer{
+    background-color: #5A5A5A;
+    color: whitesmoke;
+    height: fit-content;
+    height: 1000px;
+}
+#link>li>a{
+    text-decoration: none;
+    color: yellow;
+}
+#link>li{
+    margin-top: 10px;
+}
+#contatti2>li{
+    margin-top: 10px;
+}
+#mappa-e-contatti{
+    background-color: #5A5A5A;
+    color: #fff
+}
+#primoForm{
+    background-color: orange;
+}
+#link{
+    padding-top: 60px;
+    padding-left: 60px;
+}
+#link>li>a:hover{
+    text-decoration: underline;
+    opacity: 0.6;
+}
+#secondoLogo{
+    font-family: fantasy;
+    font-size: 65px;
+    color: yellow;
+    text-decoration: line-through;
+    position: absolute;
+    top: 2300px;
+    left: 1200px;
+}
+#contatti2{
+    position: absolute;
+    left: 400px;
+    top: 1760px
+}
+#ilTuoNome,#ilTuoCognome,#laTuaEmail,#laTuaRichiesta{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(225, 239, 38);
+    text-decoration: underline;
+    height: fit-content;
+    font-size: 15px;
+    width: 300px;
+    height: 40px;
+}
+#invia{
+    background-color: rgb(225, 239, 38);
+    color:white;
+    width: 70px;
+    height: 40px;
+}
+#invia:hover{
+    color:aquamarine;
+    text-decoration: underline;
+    opacity: 0.7;
+    border-style: groove;
+    border-radius: 10px;
+}
+#form2{
+    position: absolute;
+    left: 930px;
+    top: 1740px
+}
+h5{
+    font-size: 25px;
+}
+h4{
+    text-align: center;
+    position: absolute;
+    top: 2400px;
+    left: 600px;
+}
+
+#logo{
+    position: absolute;
+    left: 60px;
+    top: -17px;
+    font-size: 35px;
+    color: #fff;
+    text-decoration: line-through;
+    font-family: fantasy;
+}
+#logo:hover{
+    color: grey;
+    opacity: 0.9;
+}
+#social-bar {
+    top: 0;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    bottom: 0;
+    left: 0;
+    margin-left: 100px;
+    height: -moz-fit-content;
+    height: fit-content
+}
+#social-bar a {
+    font-size: 20px;
+}
+.instagram,.twitter{
+    margin-left: 80px;
+}
 %nomeecognome{
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: orange;
@@ -10,6 +121,9 @@
     font-size: 15px;
     width: 500px;
     height: 40px;
+}
+#primoForm{
+    padding-left: 40px
 }
 #nome{
     @extend %nomeecognome;
@@ -26,6 +140,9 @@
 html{
     font-size: larger;
     color: black;
+    overflow-x: hidden;
+    background-color: rgb(225, 239, 38);
+    max-width: 100%;
 }
 #invia{
     background-color: orange;
@@ -48,24 +165,24 @@ p{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 %links{
-    color: blue;
-    font-size: 17px;
-    display: inline;
+    color: #fff;
+    font-size: larger;
     margin-left: 10px;
-    text-decoration: none;
+    text-decoration: none
 }
 #home{
     @extend %links;
     position:absolute;
     top:20px;
-    font-size: large;
+    left: 1100px;
+    font-size: larger;
 }
 #link2{
     @extend %links;
     position:absolute;
     top:20px;
-    left:70px;
-    font-size: large;
+    left:1200px;
+    font-size: larger;
 }
 %linksHover{
     text-decoration: underline;
@@ -91,6 +208,141 @@ p{
     text-align: $center;
 }
 #nav{
-    background-color: red;
+    background-color: black;
     height: 50px;
+}
+
+/*Tablet*/
+@media(min-width: 768px)and (max-width: 1024px) {
+
+#home{
+    left: 300px
+}
+#link2{
+    left: 400px
+}
+html{
+    font-size: large;
+}
+#contatti2{
+    margin-left: -200px;
+    font-size: 15px;
+}
+#link{
+    font-size: 15px;
+}
+#form2{
+    margin-left: -400px;
+}
+#ilTuoNome,#ilTuoCognome,#laTuaEmail,#laTuaRichiesta{
+    width: fit-content;
+}
+h5{
+    font-size: 14px;
+    margin-left: -63px;
+}
+h4{
+    margin-left: -300px;
+}
+#secondoLogo{
+    margin-left: -650px;
+}
+
+
+}
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    /* CSS */
+    
+  #sede-legale{
+    width: fit-content;
+  }
+  h5{
+    font-size: 14px;
+    margin-left: -60px;
+  }
+  h4{
+    margin-left: -500px;
+  }
+  #contatti2{
+    margin-left: -400px;
+    font-size: 17px;
+    margin-top: -70px;
+  }
+  #form2{
+    margin-left: -850px;
+    margin-top: 140px;
+  }
+  footer{
+    font-size: large;
+  }
+  #seguitemi{
+    font-size: 20px;
+  }
+  footer > h2{
+    text-align: left;
+  }
+  #nome,#cognome,#email,#richiesta{
+    width: 400px;
+  }
+  #home,#link2{
+    font-size: 15px;
+  }
+  #home{
+    left: 152px
+  }
+  #nome,#cognome,#email,#richiesta,#ilTuoNome,#ilTuoCognome,#laTuaEmail,#laTuaRichiesta{
+    width: fit-content;
+  }
+  #link2{
+    left: 200px;
+  }
+    #Contatti,#mappa-e-contatti{
+    text-align: center
+  }
+  ::-webkit-scrollbar {
+    display: none;
+    }
+  html,body {
+    overflow-x: hidden;
+    width: 100%;
+    font-size: large;
+}
+footer{
+    height: 1400px;
+}
+    #sede-legale{
+        width: 190px;
+    }
+    #informazioni{
+        text-align: center;
+        font-size: 23px;
+    }
+    img{
+        width: 50px;
+        height: 70px;
+    }
+    #informazioni{
+        font-size: 20px;
+        text-align: center;
+    }
+    #logo{
+        font-family: cursive;
+        font-size: 30px;
+        margin-left: -40px;
+    }
+    #secondoLogo{
+        font-size: 40px;
+        margin-left: -1090px;
+        font-family: cursive;
+        color: #fff
+    }
+    .instagram,.twitter{
+        margin-left: 20px;
+    }
 }
