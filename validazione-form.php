@@ -3,8 +3,8 @@ $facebook = "https://www.facebook.com";
 $instagram = "https://www.instagram.com";
 $twitter = "https://twitter.com/i/flow/login";
 $social = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css";
-
-
+require("public-functions.php");
+use MieClassi\Utility as UT;
 
 ?>
 <!DOCTYPE html>
@@ -202,17 +202,13 @@ h4{
  <?php
  /*Pagina per la validazione dei dati del form
  */
-$nome = "nome";
-$cognome = "cognome";
-$mail = "mail";
-$richiesta = "Richiesta";
- $var1 = $_POST["nome"];
- $var2 = $_POST["cognome"];
- $var3 = $_POST["mail"];
- $var4 = $_POST["Richiesta"];
- if(filter_var($var3, FILTER_VALIDATE_EMAIL)) {
+ $nome = UT::richiestaHTTP("nome");
+ $cognome = UT::richiestaHTTP("cognome");
+ $email = UT::richiestaHTTP("mail");
+ $richiesta = UT::richiestaHTTP("Richiesta");
+ if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo "<h1>Validazione form</h1>";
-    echo "<p id='testo'>L'elemento <strong>'$mail'</strong> è valido! <br> <h1>Il form è valido!</h1></p>";
+    echo "<p id='testo'>L'elemento <strong>'$email'</strong> è valido! <br> <h1>Il form è valido!</h1></p>";
     echo "<style>
     #testo{
       font-size: 25px;
@@ -371,7 +367,7 @@ $richiesta = "Richiesta";
   <div id='align'><img src='https://cdn.discordapp.com/attachments/906882508635926608/1195380634437288047/checkmark.jpg?ex=6606d678&is=65f46178&hm=f5e4aeebd2bf7192e21288be3a47f8a232c685b1b38c690efbe790b906bcafea&' name='Checkmark' id='checkmark' title='Checkmark' alt='Checkmark' width='350px' height='350px'></div><hr>";
  } else {
     echo "<h1>Validazione form</h1>";
-    echo "<p id='testo'>L'elemento <br> <strong>'$mail'</strong> non è valido o non è presente! <br> Riprovare.</p> <hr>";
+    echo "<p id='testo'>L'elemento <br> <strong>'$email'</strong> non è valido o non è presente! <br> Riprovare.</p> <hr>";
     echo "<style> #testo{
       color: red;
       font-size: larger;
@@ -544,17 +540,16 @@ $richiesta = "Richiesta";
   }}</style>
     <h1 id='informazioni'>Form per richiesta <br> informazioni</h1> 
     <form action='validazione-form.php' method='post'>
-        <input type='text' id='nome' name='nome' minLength='0' maxLength='25' placeholder='Il tuo nome' value=$var1 required><br><br>
-        <input type='text' id='cognome' name='cognome' minLength='0' maxLength='25' placeholder='Il tuo cognome' value=$var2 required><br><br>
-        <input type='text' id='email' name='mail' minLength='0' maxLength='40' placeholder='La tua email' value=$var3 required><br><br>
-        <textarea name='Richiesta' id='richiesta' minLength='40' maxLength='200' required placeholder='Richiesta'>$var4</textarea><br><br>
+        <input required type='text' id='nome' name='nome' minLength='0' maxLength='25' placeholder='Il tuo nome' value=$nome><br><br>
+        <input required type='text' id='cognome' name='cognome' minLength='0' maxLength='25' placeholder='Il tuo cognome' value=$cognome><br><br>
+        <input required type='text' id='email' name='mail' minLength='0' maxLength='40' placeholder='La tua email' value=$email><br><br>
+        <textarea name='Richiesta' id='richiesta' minLength='40' maxLength='200' required placeholder='Richiesta'>$richiesta</textarea><br><br>
         <input type='checkbox' id='spunta-dati'>
         <label for='spunta-dati'>Acconsento al <br> trattamento dei <br> dati personali</label><br><br>
         <input type='submit' id='invia' name='Invia'></form><br><br><hr>";
   } 
 
  ?>
-
 <!-- I miei finti link + contatti e informazioni -->
 <footer>
 <br><br><br>
@@ -587,7 +582,7 @@ $richiesta = "Richiesta";
   <div id='form2'>
   <h5>Se hai bisogno di ulteriori informazioni, <br> compila pure questo form</h5>
   <form id='secondoForm' action='validazione-form.php' method='post'>
-        <input type='text' id='ilTuoNome' minLength='0' maxLength='25' name='nome' placeholder='Il tuo nome' required><br><br>
+        <input type='text' id='ilTuoNome' minLength='0' maxLength='25' name='nome' placeholder='Il tuo nome'><br><br>
         <input type='text' id='ilTuoCognome' minLength='0' maxLength='25' name='cognome' placeholder='Il tuo cognome' required><br><br>
         <input type='text' id='laTuaEmail' minLength='0' maxLength='40' name='mail' placeholder='La tua email' required><br><br>
         <textarea name='Richiesta' minLength='40' maxLength='200' id='laTuaRichiesta' required placeholder='Richiesta'></textarea><br><br>
